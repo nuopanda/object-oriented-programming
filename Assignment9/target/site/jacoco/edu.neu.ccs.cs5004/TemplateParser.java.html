@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>TemplateParser.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CS5004 Assignment</a> &gt; <a href="index.source.html" class="el_package">edu.neu.ccs.cs5004</a> &gt; <span class="el_source">TemplateParser.java</span></div><h1>TemplateParser.java</h1><pre class="source lang-java linenums">package edu.neu.ccs.cs5004;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+
+
+/**
+ * The class Template parser.
+ */
+<span class="fc" id="L14">public class TemplateParser {</span>
+
+  /**
+   * Read the template file and records its content as a string.
+   *
+   * @param templateFile the template file
+   * @return the template
+   */
+  public static String parse(String templateFile) {
+    InputStream file;
+    Reader reader;
+<span class="fc" id="L25">    BufferedReader inputFile = null;</span>
+<span class="fc" id="L26">    StringBuilder stringBuilder = new StringBuilder();</span>
+<span class="fc" id="L27">    String errString = &quot;Failed to close input stream in finally block&quot;;</span>
+    try {
+<span class="fc" id="L29">      file = new FileInputStream(templateFile);</span>
+<span class="fc" id="L30">      reader = new InputStreamReader(file,&quot;UTF-8&quot;);</span>
+<span class="fc" id="L31">      inputFile = new BufferedReader(reader);</span>
+      String line;
+<span class="fc bfc" id="L33" title="All 2 branches covered.">      while ((line = inputFile.readLine()) != null) {</span>
+<span class="fc" id="L34">        stringBuilder.append(line);</span>
+<span class="fc" id="L35">        stringBuilder.append(System.lineSeparator());</span>
+      }
+<span class="fc" id="L37">      inputFile.close();</span>
+<span class="fc" id="L38">    } catch (IOException e) { // FileNotFoundException is an IOException</span>
+<span class="fc" id="L39">      System.out.println(&quot;Exception in handling the file : &quot; + e.getMessage());</span>
+<span class="fc" id="L40">      return &quot;&quot;;</span>
+    } finally {
+      // if an exception is thrown, the file should be closed.
+<span class="pc bpc" id="L43" title="4 of 6 branches missed.">      if (inputFile != null) {</span>
+        try {
+<span class="pc" id="L45">          inputFile.close();</span>
+<span class="nc" id="L46">        } catch (IOException e) {</span>
+<span class="nc" id="L47">          System.out.println(errString);</span>
+<span class="pc" id="L48">        }</span>
+      }
+<span class="nc" id="L50">    }</span>
+<span class="fc" id="L51">    return stringBuilder.toString();</span>
+  }
+
+  @Override
+  public String toString() {
+<span class="fc" id="L56">    return &quot;This is a Template Parser&quot;;</span>
+  }
+
+  @Override
+  public int hashCode() {
+<span class="fc" id="L61">    return this.toString().hashCode();</span>
+  }
+
+  @Override
+  public boolean equals(Object object) {
+<span class="fc bfc" id="L66" title="All 2 branches covered.">    if (object == this) {</span>
+<span class="fc" id="L67">      return true;</span>
+    }
+<span class="fc bfc" id="L69" title="All 4 branches covered.">    if (object == null || this.getClass() != object.getClass()) {</span>
+<span class="fc" id="L70">      return false;</span>
+    }
+<span class="pc bpc" id="L72" title="1 of 2 branches missed.">    return this.hashCode() == object.hashCode();</span>
+  }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

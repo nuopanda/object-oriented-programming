@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>CmdParser.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CS5004 Assignment</a> &gt; <a href="index.source.html" class="el_package">edu.neu.ccs.cs5004</a> &gt; <span class="el_source">CmdParser.java</span></div><h1>CmdParser.java</h1><pre class="source lang-java linenums">package edu.neu.ccs.cs5004;
+
+import java.util.Objects;
+
+/**
+ * This class represents a command line parser.
+ */
+<span class="fc" id="L8">public class CmdParser {</span>
+
+  /**
+   * The result returned by the parser.
+   */
+  protected CmdLineResult result;
+
+  /**
+   * The main method of the parser. Parse a command given a set of options.
+   *
+   * @param args the command
+   * @param options the options
+   * @return a result contains the options and correspondent arguments
+   */
+  public CmdLineResult parse(String[] args, Options options) {
+<span class="fc" id="L23">    result = new CmdLineResult();</span>
+<span class="fc" id="L24">    Option optionNeedArg = null;</span>
+
+<span class="fc bfc" id="L26" title="All 2 branches covered.">    for (int i = 0; i &lt; args.length; i++) {</span>
+<span class="fc" id="L27">      String token = args[i];</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">      if (token.startsWith(&quot;--&quot;)) {  //is an option</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">        if (optionNeedArg != null) {  //missing argument</span>
+<span class="fc" id="L30">          System.out.println(&quot;Error! No Argument Found!&quot;);</span>
+<span class="fc" id="L31">          System.out.println(optionNeedArg.getOptName()</span>
+<span class="fc" id="L32">              + &quot; &quot; + optionNeedArg.getDescription());</span>
+<span class="fc" id="L33">          throw new MissingArgumentException();</span>
+        }
+<span class="fc bfc" id="L35" title="All 2 branches covered.">        if (!options.hasOptions(token)) {</span>
+<span class="fc" id="L36">          System.out.println(&quot;Error! Unrecognized Option!&quot;);</span>
+<span class="fc" id="L37">          throw new UnrecognizedOptionException();</span>
+        } else {
+<span class="fc" id="L39">          Option opt = options.getOptionsMap().get(token);</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">          if (opt.isRequiredArg()) {</span>
+<span class="fc" id="L41">            optionNeedArg = opt;</span>
+          }
+<span class="fc" id="L43">          result.addOption(opt);</span>
+<span class="fc" id="L44">        }</span>
+      } else {  //is an argument
+<span class="fc bfc" id="L46" title="All 2 branches covered.">        if (optionNeedArg == null) {</span>
+<span class="fc" id="L47">          System.out.println(&quot;Error! Unrecognized Option!&quot;);</span>
+<span class="fc" id="L48">          throw new UnrecognizedOptionException();</span>
+        }
+<span class="fc" id="L50">        result.getOptions().get(optionNeedArg.getOptName()).setArgs(token);</span>
+<span class="fc" id="L51">        optionNeedArg = null;</span>
+      }
+    }
+
+<span class="fc" id="L55">    result.checkValidity();</span>
+<span class="fc" id="L56">    return result;</span>
+  }
+
+  @Override
+  public String toString() {
+<span class="fc" id="L61">    return &quot;This is a command line parser.&quot;;</span>
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+<span class="fc bfc" id="L66" title="All 2 branches covered.">    if (this == obj) {</span>
+<span class="fc" id="L67">      return true;</span>
+    }
+<span class="fc bfc" id="L69" title="All 4 branches covered.">    if (obj == null || getClass() != obj.getClass()) {</span>
+<span class="fc" id="L70">      return false;</span>
+    }
+<span class="fc" id="L72">    CmdParser cmdParser = (CmdParser) obj;</span>
+<span class="fc" id="L73">    return Objects.equals(result, cmdParser.result);</span>
+  }
+
+  @Override
+  public int hashCode() {
+<span class="fc" id="L78">    return Objects.hash(result);</span>
+  }
+}
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

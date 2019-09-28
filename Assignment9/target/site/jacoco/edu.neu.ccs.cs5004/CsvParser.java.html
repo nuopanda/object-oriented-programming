@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>CsvParser.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CS5004 Assignment</a> &gt; <a href="index.source.html" class="el_package">edu.neu.ccs.cs5004</a> &gt; <span class="el_source">CsvParser.java</span></div><h1>CsvParser.java</h1><pre class="source lang-java linenums">package edu.neu.ccs.cs5004;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+<span class="fc" id="L14">public class CsvParser {</span>
+
+  private static final String HEADER_SPLIT = &quot;,(?=(?:[^\&quot;]*\&quot;[^\&quot;]*\&quot;)*[^\&quot;]*$)&quot;;
+  private static final String LINE_SPLIT = &quot;,(?=([^\&quot;]*\&quot;[^\&quot;]*\&quot;)*[^\&quot;]*$)&quot;;
+  private static final String LINE_REPLACE = &quot;\&quot;&quot;;
+
+  /**
+   * Parse csv.
+   *
+   * @param file the file
+   */
+  public static CustomerInfo parse(String file) {
+<span class="fc" id="L26">    Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L27">    List&lt;String[]&gt; contactInfo = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L28">    int colNum = 0;</span>
+    InputStream fileReader;
+    Reader reader;
+<span class="fc" id="L31">    BufferedReader infoFile = null;</span>
+    try {
+<span class="fc" id="L33">      fileReader = new FileInputStream(file);</span>
+<span class="fc" id="L34">      reader = new InputStreamReader(fileReader, &quot;UTF-8&quot;);</span>
+<span class="fc" id="L35">      infoFile = new BufferedReader(reader);</span>
+      String line;
+<span class="pc bpc" id="L37" title="1 of 2 branches missed.">      if ((line = infoFile.readLine()) != null) {</span>
+<span class="fc" id="L38">        String[] parts = line.replaceAll(LINE_REPLACE, &quot; &quot;).split(HEADER_SPLIT);</span>
+<span class="fc" id="L39">        colNum = parts.length;</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">        for (int i = 0; i &lt; colNum; i++) {</span>
+<span class="fc" id="L41">          map.put(parts[i].trim(), i);</span>
+        }
+      }
+<span class="fc bfc" id="L44" title="All 2 branches covered.">      while ((line = infoFile.readLine()) != null) {</span>
+<span class="fc" id="L45">        String[] parts = line.split(LINE_SPLIT);</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">        if (parts.length != colNum) {</span>
+<span class="fc" id="L47">          continue;</span>
+        }
+<span class="fc" id="L49">        contactInfo.add(parts);</span>
+<span class="fc" id="L50">      }</span>
+<span class="fc" id="L51">    } catch (IOException ioe) {</span>
+<span class="fc" id="L52">      System.out.println(&quot;Error handling input file : &quot; + ioe.getMessage());</span>
+    } finally {
+<span class="pc bpc" id="L54" title="4 of 6 branches missed.">      if (infoFile != null) {</span>
+        try {
+<span class="pc" id="L56">          infoFile.close();</span>
+<span class="nc" id="L57">        } catch (IOException e) {</span>
+<span class="nc" id="L58">          System.out.println(&quot;Failed to close input stream&quot;);</span>
+<span class="pc" id="L59">        }</span>
+      }
+<span class="nc" id="L61">    }</span>
+<span class="fc" id="L62">    return new CustomerInfo(contactInfo, map, colNum);</span>
+  }
+
+
+  @Override
+  public int hashCode() {
+<span class="fc" id="L68">    return this.toString().hashCode();</span>
+  }
+
+  @Override
+  public boolean equals(Object object) {
+<span class="fc bfc" id="L73" title="All 2 branches covered.">    if (object == this) {</span>
+<span class="fc" id="L74">      return true;</span>
+    }
+<span class="fc bfc" id="L76" title="All 4 branches covered.">    if (object == null || this.getClass() != object.getClass()) {</span>
+<span class="fc" id="L77">      return false;</span>
+    }
+<span class="pc bpc" id="L79" title="1 of 2 branches missed.">    return this.hashCode() == object.hashCode();</span>
+  }
+
+  @Override
+  public String toString() {
+<span class="fc" id="L84">    return &quot;This is a CSV parser&quot;;</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

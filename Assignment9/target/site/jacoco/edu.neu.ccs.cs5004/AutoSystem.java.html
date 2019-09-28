@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>AutoSystem.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CS5004 Assignment</a> &gt; <a href="index.source.html" class="el_package">edu.neu.ccs.cs5004</a> &gt; <span class="el_source">AutoSystem.java</span></div><h1>AutoSystem.java</h1><pre class="source lang-java linenums">package edu.neu.ccs.cs5004;
+
+import java.util.Map;
+
+<span class="fc" id="L5">public class AutoSystem {</span>
+  private static final String OUTPUT_DIR = &quot;--output-dir&quot;;
+  private static final String CSV_FILE = &quot;--csv-file&quot;;
+  private static final String EMAIL_TEMPLATE = &quot;--email-template&quot;;
+  private static final String LETTER_TEMPLATE = &quot;--letter-template&quot;;
+
+
+  protected static void main(String[] args) {
+
+<span class="fc" id="L14">    Options options = new Options();</span>
+<span class="fc" id="L15">    options.addOptions(new Option(&quot;--email&quot;, &quot;only generate email messages&quot;, false));</span>
+<span class="fc" id="L16">    options.addOptions(new Option(&quot;--email-template&quot;, &quot;accept a filename that holds the template. &quot;</span>
+        + &quot;Required if --email is used&quot;, true));
+<span class="fc" id="L18">    options.addOptions(new Option(&quot;--letter&quot;, &quot;only generate letters&quot;, false));</span>
+<span class="fc" id="L19">    options.addOptions(new Option(&quot;--letter-template&quot;, &quot;accept a filename that hold the &quot;</span>
+        + &quot;letter template. Required if --letter is used&quot;, true));
+<span class="fc" id="L21">    options.addOptions(new Option(&quot;--output-dir&quot;, &quot;accept the name of a folder, all\n&quot;</span>
+        + &quot;output is placed in this folder&quot;, true));
+<span class="fc" id="L23">    options.addOptions(new Option(&quot;--csv-file&quot;, &quot; accept the name of the csv file to\n&quot;</span>
+        + &quot;process&quot;, true));
+
+    /*String[] test = new String[]{
+        &quot;--email&quot;, &quot;--email-template&quot;, &quot;email-template.txt&quot;,
+        &quot;--output-dir&quot;, &quot;emails&quot;, &quot;--csv-file&quot;, &quot;customer.csv&quot;};
+    */
+<span class="fc" id="L30">    String templateName = null;</span>
+<span class="fc" id="L31">    String outputDir = null;</span>
+<span class="fc" id="L32">    String csvFile = null;</span>
+
+    // determine the template and csvFile to read.
+<span class="fc" id="L35">    CmdParser cmdParser = new CmdParser();</span>
+<span class="fc" id="L36">    CmdLineResult cmdLineResult = cmdParser.parse(args, options);</span>
+<span class="fc bfc" id="L37" title="All 2 branches covered.">    for (Map.Entry&lt;String, Option&gt; entry : cmdLineResult.getOptions().entrySet()) {</span>
+<span class="pc bpc" id="L38" title="1 of 4 branches missed.">      if (entry.getKey().equals(EMAIL_TEMPLATE) &amp;&amp; entry.getValue().getArgs() != null) {</span>
+<span class="fc" id="L39">        templateName = entry.getValue().getArgs();</span>
+      }
+<span class="pc bpc" id="L41" title="1 of 4 branches missed.">      if (entry.getKey().equals(LETTER_TEMPLATE) &amp;&amp; entry.getValue().getArgs() != null) {</span>
+<span class="fc" id="L42">        templateName = entry.getValue().getArgs();</span>
+      }
+<span class="fc bfc" id="L44" title="All 2 branches covered.">      if (entry.getKey().equals(OUTPUT_DIR)) {</span>
+<span class="fc" id="L45">        outputDir = entry.getValue().getArgs();</span>
+      }
+<span class="fc bfc" id="L47" title="All 2 branches covered.">      if (entry.getKey().equals(CSV_FILE)) {</span>
+<span class="fc" id="L48">        csvFile = entry.getValue().getArgs();</span>
+      }
+
+<span class="fc" id="L51">    }</span>
+
+
+<span class="fc" id="L54">    String template = TemplateParser.parse(templateName);</span>
+<span class="fc" id="L55">    CustomerInfo customerInfo = CsvParser.parse(csvFile);</span>
+    // output dir should be provided by the user
+<span class="fc" id="L57">    FileGenerator.generator(customerInfo, template, outputDir);</span>
+<span class="fc" id="L58">  }</span>
+
+  @Override
+  public String toString() {
+<span class="fc" id="L62">    return &quot;AutoSystem&quot;;</span>
+  }
+
+  @Override
+  public int hashCode() {
+<span class="fc" id="L67">    return this.toString().hashCode();</span>
+  }
+
+  @Override
+  public boolean equals(Object object) {
+<span class="fc bfc" id="L72" title="All 2 branches covered.">    if (object == this) {</span>
+<span class="fc" id="L73">      return true;</span>
+    }
+<span class="fc bfc" id="L75" title="All 4 branches covered.">    if (object == null || this.getClass() != object.getClass()) {</span>
+<span class="fc" id="L76">      return false;</span>
+    }
+<span class="pc bpc" id="L78" title="1 of 2 branches missed.">    return this.hashCode() == object.hashCode();</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

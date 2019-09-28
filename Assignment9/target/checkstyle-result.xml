@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="/Users/nuopanda/Documents/GitHub/Team_repo_Nuozhou_Shen_Zhenhui/Assignment9/src/main/java/edu/neu/ccs/cs5004/AutoSystem.java">
+</file>
+<file name="/Users/nuopanda/Documents/GitHub/Team_repo_Nuozhou_Shen_Zhenhui/Assignment9/src/main/java/edu/neu/ccs/cs5004/CmdLineResult.java">
+</file>
+<file name="/Users/nuopanda/Documents/GitHub/Team_repo_Nuozhou_Shen_Zhenhui/Assignment9/src/main/java/edu/neu/ccs/cs5004/CmdParser.java">
+</file>
+<file name="/Users/nuopanda/Documents/GitHub/Team_repo_Nuozhou_Shen_Zhenhui/Assignment9/src/main/java/edu/neu/ccs/cs5004/CsvParser.java">
+</file>
+<file name="/Users/nuopanda/Documents/GitHub/Team_repo_Nuozhou_Shen_Zhenhui/Assignment9/src/main/java/edu/neu/ccs/cs5004/CustomerInfo.java">
+</file>
+<file name="/Users/nuopanda/Documents/GitHub/Team_repo_Nuozhou_Shen_Zhenhui/Assignment9/src/main/java/edu/neu/ccs/cs5004/FileGenerator.java">
+</file>
+<file name="/Users/nuopanda/Documents/GitHub/Team_repo_Nuozhou_Shen_Zhenhui/Assignment9/src/main/java/edu/neu/ccs/cs5004/MissingArgumentException.java">
+</file>
+<file name="/Users/nuopanda/Documents/GitHub/Team_repo_Nuozhou_Shen_Zhenhui/Assignment9/src/main/java/edu/neu/ccs/cs5004/MissingOptionException.java">
+</file>
+<file name="/Users/nuopanda/Documents/GitHub/Team_repo_Nuozhou_Shen_Zhenhui/Assignment9/src/main/java/edu/neu/ccs/cs5004/Option.java">
+</file>
+<file name="/Users/nuopanda/Documents/GitHub/Team_repo_Nuozhou_Shen_Zhenhui/Assignment9/src/main/java/edu/neu/ccs/cs5004/Options.java">
+</file>
+<file name="/Users/nuopanda/Documents/GitHub/Team_repo_Nuozhou_Shen_Zhenhui/Assignment9/src/main/java/edu/neu/ccs/cs5004/TemplateParser.java">
+</file>
+<file name="/Users/nuopanda/Documents/GitHub/Team_repo_Nuozhou_Shen_Zhenhui/Assignment9/src/main/java/edu/neu/ccs/cs5004/UnrecognizedOptionException.java">
+</file>
+<file name="/Users/nuopanda/Documents/GitHub/Team_repo_Nuozhou_Shen_Zhenhui/Assignment9/src/main/java/edu/neu/ccs/cs5004/WrongTemplateTypeException.java">
+</file>
+</checkstyle>

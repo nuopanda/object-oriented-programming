@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>CmdLineResult.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CS5004 Assignment</a> &gt; <a href="index.source.html" class="el_package">edu.neu.ccs.cs5004</a> &gt; <span class="el_source">CmdLineResult.java</span></div><h1>CmdLineResult.java</h1><pre class="source lang-java linenums">package edu.neu.ccs.cs5004;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * This is class represents the result of command line parser.
+ */
+<span class="fc" id="L9">public class CmdLineResult {</span>
+
+  /**
+   * The number of required options.
+   */
+  private static final int NUM_OF_OPTIONS = 4;
+  private String type;
+<span class="fc" id="L16">  private Map&lt;String, Option&gt; options = new HashMap&lt;&gt;();</span>
+
+  /**
+   * Get the options of the command.
+   *
+   * @return the options
+   */
+  public Map&lt;String, Option&gt; getOptions() {
+<span class="fc" id="L24">    return options;</span>
+  }
+
+  /**
+   * Get the type of the notice.
+   *
+   * @return the type
+   */
+  public String getType() {
+<span class="fc" id="L33">    return type;</span>
+  }
+
+  /**
+   * Add a option to the result. Set the type if the option is the type option.
+   *
+   * @param opt the new option
+   */
+  public void addOption(Option opt) {
+<span class="fc bfc" id="L42" title="All 2 branches covered.">    if (opt.getOptName().matches(Options.PRODUCT_PATTERN)) {</span>
+<span class="fc" id="L43">      setType(opt.getOptName().substring(2));</span>
+    }
+<span class="fc" id="L45">    options.put(opt.getOptName(), opt);</span>
+<span class="fc" id="L46">  }</span>
+
+  /**
+   * Set the type of the notice.
+   *
+   * @param type the type of the notice
+   */
+  public void setType(String type) {
+<span class="fc" id="L54">    this.type = type;</span>
+<span class="fc" id="L55">  }</span>
+
+  /**
+   * check: 1.no options missing. 2.no args missing. 3.consistent type.
+   */
+  public void checkValidity() {
+<span class="fc bfc" id="L61" title="All 2 branches covered.">    if (options.size() != NUM_OF_OPTIONS) {</span>
+<span class="fc" id="L62">      System.out.println(&quot;Options missing.&quot;);</span>
+<span class="fc" id="L63">      throw new MissingOptionException();</span>
+    }
+<span class="fc" id="L65">    boolean isMissingArgs = options.entrySet().stream()</span>
+<span class="fc" id="L66">        .filter(entry -&gt; entry.getValue().isRequiredArg())</span>
+<span class="fc bfc" id="L67" title="All 2 branches covered.">        .anyMatch(entry -&gt; entry.getValue().getArgs() == null);</span>
+<span class="fc bfc" id="L68" title="All 2 branches covered.">    if (isMissingArgs) {</span>
+<span class="fc" id="L69">      System.out.println(&quot;Arguments missing.&quot;);</span>
+<span class="fc" id="L70">      throw new MissingArgumentException();</span>
+    }
+<span class="fc bfc" id="L72" title="All 2 branches covered.">    if (!isTypeConsistent()) {</span>
+<span class="fc" id="L73">      System.out.println(&quot;The template type is wrong.&quot;);</span>
+<span class="fc" id="L74">      throw new WrongTemplateTypeException();</span>
+    }
+<span class="fc" id="L76">  }</span>
+
+  /**
+   * Helper method to check to type consistency.
+   *
+   * @return true if the options are consistent in terms of the type
+   */
+  private boolean isTypeConsistent() {
+<span class="fc bfc" id="L84" title="All 2 branches covered.">    if (type.equals(Options.EMAIL)) {</span>
+<span class="fc" id="L85">      return options.containsKey(Options.EMAIL_TEMPLATE);</span>
+    } else {
+<span class="fc" id="L87">      return options.containsKey(Options.LETTER_TEMPLATE);</span>
+    }
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+<span class="fc bfc" id="L93" title="All 2 branches covered.">    if (obj == this) {</span>
+<span class="fc" id="L94">      return true;</span>
+    }
+<span class="fc bfc" id="L96" title="All 4 branches covered.">    if (obj == null || this.getClass() != obj.getClass()) {</span>
+<span class="fc" id="L97">      return false;</span>
+    }
+<span class="fc" id="L99">    CmdLineResult that = (CmdLineResult) obj;</span>
+<span class="pc bpc" id="L100" title="1 of 2 branches missed.">    return this.getOptions().equals(that.getOptions())</span>
+<span class="pc bpc" id="L101" title="1 of 2 branches missed.">        &amp;&amp; this.getType().equals(that.getType());</span>
+  }
+
+  @Override
+  public String toString() {
+<span class="fc" id="L106">    return &quot;CmdLineResult{&quot;</span>
+        + &quot;type='&quot; + type + '\''
+        + &quot;, options=&quot; + options
+        + '}';
+  }
+
+  @Override
+  public int hashCode() {
+<span class="fc" id="L114">    int result = getType().hashCode();</span>
+<span class="fc" id="L115">    result = 31 * result + getOptions().hashCode();</span>
+<span class="fc" id="L116">    return result;</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

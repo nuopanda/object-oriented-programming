@@ -1,0 +1,14 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+CS5004 Assignment,edu.neu.ccs.cs5004,FileGenerator,54,189,8,18,8,38,6,12,0,5
+CS5004 Assignment,edu.neu.ccs.cs5004,UnrecognizedOptionException,0,4,0,0,0,2,0,1,0,1
+CS5004 Assignment,edu.neu.ccs.cs5004,CsvParser,26,135,6,16,3,32,5,11,0,5
+CS5004 Assignment,edu.neu.ccs.cs5004,MissingOptionException,0,4,0,0,0,2,0,1,0,1
+CS5004 Assignment,edu.neu.ccs.cs5004,CmdLineResult,1,172,2,20,0,37,2,21,0,12
+CS5004 Assignment,edu.neu.ccs.cs5004,CustomerInfo,21,77,0,10,4,20,1,11,1,6
+CS5004 Assignment,edu.neu.ccs.cs5004,CmdParser,0,136,0,18,0,34,0,14,0,5
+CS5004 Assignment,edu.neu.ccs.cs5004,Option,0,138,0,16,0,26,0,17,0,9
+CS5004 Assignment,edu.neu.ccs.cs5004,AutoSystem,1,182,3,19,0,34,3,13,0,5
+CS5004 Assignment,edu.neu.ccs.cs5004,Options,0,83,0,6,0,21,0,10,0,7
+CS5004 Assignment,edu.neu.ccs.cs5004,MissingArgumentException,0,4,0,0,0,2,0,1,0,1
+CS5004 Assignment,edu.neu.ccs.cs5004,TemplateParser,25,97,5,11,3,25,4,9,0,5
+CS5004 Assignment,edu.neu.ccs.cs5004,WrongTemplateTypeException,0,4,0,0,0,2,0,1,0,1

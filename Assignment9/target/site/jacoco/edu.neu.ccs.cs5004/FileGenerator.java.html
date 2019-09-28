@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>FileGenerator.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CS5004 Assignment</a> &gt; <a href="index.source.html" class="el_package">edu.neu.ccs.cs5004</a> &gt; <span class="el_source">FileGenerator.java</span></div><h1>FileGenerator.java</h1><pre class="source lang-java linenums">package edu.neu.ccs.cs5004;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.nio.charset.StandardCharsets;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/**
+ * The class File generator.
+ */
+<span class="fc" id="L15">public class FileGenerator {</span>
+
+  private static final String PATH_PATTERN = &quot;[/\\\\]+&quot;;
+  private static final String REPLACE_PATTERN = &quot;\\[\\[(.*?)\\]\\]&quot;;
+  private static final int GROUP_NUM = 1;
+  private static final String FILE_NAME = &quot;file&quot;;
+  private static final String REPLACE_PATTERN2 = &quot;^\&quot;|\&quot;$&quot;;
+
+  /**
+   * generator.
+   *
+   * @param customerInfo the customer info
+   * @param template the template
+   * @param outputDir the output dir
+   */
+  public static void generator(CustomerInfo customerInfo, String template, String outputDir) {
+<span class="fc" id="L31">    BufferedWriter outputFile = null;</span>
+<span class="fc" id="L32">    String fileName = null;</span>
+<span class="fc" id="L33">    String errString = &quot;Failed to close output stream in finally block&quot;;</span>
+<span class="fc bfc" id="L34" title="All 2 branches covered.">    for (int i = 0; i &lt; customerInfo.getContactInfo().size(); i++) {</span>
+<span class="fc" id="L35">      String path = (outputDir + &quot;\\&quot;).replaceAll(PATH_PATTERN, Matcher.quoteReplacement(System</span>
+<span class="fc" id="L36">          .getProperty(&quot;file.separator&quot;)));</span>
+<span class="fc" id="L37">      File outFile = new File(path + FILE_NAME + i + &quot;.txt&quot;);</span>
+      try {
+<span class="fc" id="L39">        boolean folderExisted =</span>
+<span class="pc bpc" id="L40" title="1 of 4 branches missed.">            outFile.getParentFile().exists() || outFile.getParentFile().mkdirs();</span>
+<span class="pc bpc" id="L41" title="1 of 2 branches missed.">        if (!folderExisted) {</span>
+<span class="nc" id="L42">          throw new IOException(&quot;Unable to create the path&quot;);</span>
+        }
+<span class="fc" id="L44">        outputFile = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outFile),</span>
+            StandardCharsets.UTF_8));
+<span class="fc" id="L46">        String[] lines = template.split(System.getProperty(&quot;line.separator&quot;));</span>
+<span class="fc" id="L47">        StringBuilder stringBuilder = new StringBuilder();</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">        for (String line : lines) {</span>
+<span class="fc" id="L49">          Pattern pattern = Pattern.compile(REPLACE_PATTERN);</span>
+<span class="fc" id="L50">          Matcher matcher = pattern.matcher(template);</span>
+<span class="fc bfc" id="L51" title="All 2 branches covered.">          while (matcher.find()) {</span>
+<span class="fc" id="L52">            String wordToReplace = matcher.group(GROUP_NUM);</span>
+<span class="fc" id="L53">            int col = customerInfo.getMap().get(wordToReplace);</span>
+<span class="fc" id="L54">            line = line</span>
+<span class="fc" id="L55">                .replace(&quot;[[&quot; + wordToReplace + &quot;]]&quot;,</span>
+<span class="fc" id="L56">                    customerInfo.getContactInfo().get(i)[col].replaceAll(REPLACE_PATTERN2, &quot;&quot;));</span>
+<span class="fc" id="L57">          }</span>
+<span class="fc" id="L58">          stringBuilder.append(line);</span>
+<span class="fc" id="L59">          stringBuilder.append(System.lineSeparator());</span>
+        }
+<span class="fc" id="L61">        outputFile.write(stringBuilder.toString());</span>
+<span class="nc" id="L62">      } catch (IOException ioe) {</span>
+<span class="nc" id="L63">        System.out.println(&quot;Error handling the input file: &quot; + ioe.getMessage());</span>
+<span class="nc" id="L64">        ioe.printStackTrace();</span>
+      } finally {
+<span class="pc bpc" id="L66" title="5 of 6 branches missed.">        if (outputFile != null) {</span>
+          try {
+<span class="pc" id="L68">            outputFile.close();</span>
+<span class="nc" id="L69">          } catch (IOException e) {</span>
+<span class="nc" id="L70">            System.out.println(errString);</span>
+<span class="nc" id="L71">            e.printStackTrace();</span>
+<span class="pc" id="L72">          }</span>
+        }
+<span class="nc" id="L74">      }</span>
+    }
+<span class="fc" id="L76">  }</span>
+
+  @Override
+  public String toString() {
+<span class="fc" id="L80">    return &quot;This is a File Generator&quot;;</span>
+  }
+
+  @Override
+  public int hashCode() {
+<span class="fc" id="L85">    return this.toString().hashCode();</span>
+  }
+
+  @Override
+  public boolean equals(Object object) {
+<span class="fc bfc" id="L90" title="All 2 branches covered.">    if (object == this) {</span>
+<span class="fc" id="L91">      return true;</span>
+    }
+<span class="fc bfc" id="L93" title="All 4 branches covered.">    if (object == null || this.getClass() != object.getClass()) {</span>
+<span class="fc" id="L94">      return false;</span>
+    }
+<span class="pc bpc" id="L96" title="1 of 2 branches missed.">    return this.hashCode() == object.hashCode();</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>
