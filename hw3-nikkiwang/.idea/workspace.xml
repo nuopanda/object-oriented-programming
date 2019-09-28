@@ -1,0 +1,1034 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="59d24b45-18fa-457f-882a-96168b50734c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Assignment5/src/main/java/edu/neu/ccs/cs5004/Assignment5/problem2/Empty.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/problem2/Direction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/problem3/TechnicalReport.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1178">
+              <caret line="70" column="34" selection-start-line="70" selection-start-column="34" selection-end-line="70" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/problem3/Month.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/problem3/Location.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/problem3/JournalTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="18" column="63" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/problem3/Journal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/problem3/ConferenceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="15" column="43" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1023#1024#0" expanded="true" />
+                <element signature="e#1079#1080#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/problem3/Conference.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/problem3/AuthorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/problem1/AbstractArtist.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="94">
+              <caret line="5" selection-start-line="5" selection-end-line="10" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+        <option value="JUnit4 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/problem2/makeAndModel.java" />
+        <option value="$PROJECT_DIR$/src/problem3/Location.java" />
+        <option value="$PROJECT_DIR$/src/problem2/AutomobileTest.java" />
+        <option value="$PROJECT_DIR$/src/problem1/AbstractADF.java" />
+        <option value="$PROJECT_DIR$/src/problem1/Genre.java" />
+        <option value="$PROJECT_DIR$/src/problem3/AuthorTest.java" />
+        <option value="$PROJECT_DIR$/src/problem3/ConferenceTest.java" />
+        <option value="$PROJECT_DIR$/src/problem3/JournalTest.java" />
+        <option value="$PROJECT_DIR$/src/problem3/LocationTest.java" />
+        <option value="$PROJECT_DIR$/src/problem3/TechnicalReport.java" />
+        <option value="$PROJECT_DIR$/src/problem3/TechnicalReportTest.java" />
+        <option value="$PROJECT_DIR$/src/problem3/Month.java" />
+        <option value="$PROJECT_DIR$/src/problem3/Journal.java" />
+        <option value="$PROJECT_DIR$/src/problem3/Conference.java" />
+        <option value="$PROJECT_DIR$/src/problem3/Author.java" />
+        <option value="$PROJECT_DIR$/src/problem1/DancerTest.java" />
+        <option value="$PROJECT_DIR$/src/problem1/FilmmakerTest.java" />
+        <option value="$PROJECT_DIR$/src/problem1/MusicianTest.java" />
+        <option value="$PROJECT_DIR$/src/problem1/NameTest.java" />
+        <option value="$PROJECT_DIR$/src/problem1/PainterTest.java" />
+        <option value="$PROJECT_DIR$/src/problem1/PhotographerTest.java" />
+        <option value="$PROJECT_DIR$/src/problem1/PoetTest.java" />
+        <option value="$PROJECT_DIR$/src/problem1/Photographer.java" />
+        <option value="$PROJECT_DIR$/src/problem1/Poet.java" />
+        <option value="$PROJECT_DIR$/src/problem1/Name.java" />
+        <option value="$PROJECT_DIR$/src/problem1/Filmmaker.java" />
+        <option value="$PROJECT_DIR$/src/problem1/Dancer.java" />
+        <option value="$PROJECT_DIR$/src/problem1/Actor.java" />
+        <option value="$PROJECT_DIR$/src/problem1/ActorTest.java" />
+        <option value="$PROJECT_DIR$/src/problem2/BusAndTruck.java" />
+        <option value="$PROJECT_DIR$/src/problem2/BusAndTruckTest.java" />
+        <option value="$PROJECT_DIR$/src/problem2/BusTest.java" />
+        <option value="$PROJECT_DIR$/src/problem2/TruckTest.java" />
+        <option value="$PROJECT_DIR$/src/problem2/Automobile.java" />
+        <option value="$PROJECT_DIR$/src/problem1/AbstractArtist.java" />
+        <option value="$PROJECT_DIR$/src/problem1/Musician.java" />
+        <option value="$PROJECT_DIR$/src/problem1/Painter.java" />
+        <option value="$PROJECT_DIR$/src/problem2/Bus.java" />
+        <option value="$PROJECT_DIR$/src/problem2/Direction.java" />
+        <option value="$PROJECT_DIR$/src/problem2/InvalidAccelerationException.java" />
+        <option value="$PROJECT_DIR$/src/problem2/InvalidDecelerationException.java" />
+        <option value="$PROJECT_DIR$/src/problem2/MakeAndModelTest.java" />
+        <option value="$PROJECT_DIR$/src/problem2/Motorcycle.java" />
+        <option value="$PROJECT_DIR$/src/problem2/MotorcycleTest.java" />
+        <option value="$PROJECT_DIR$/src/problem2/Truck.java" />
+        <option value="$PROJECT_DIR$/src/problem3/AbstractPublication.java" />
+        <option value="$PROJECT_DIR$/src/problem2/AbstractVehicle.java" />
+        <option value="$PROJECT_DIR$/src/problem2/MakeAndModel.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="235" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="827" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="hw3-nikkiwang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hw3-nikkiwang" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hw3-nikkiwang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hw3-nikkiwang" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hw3-nikkiwang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hw3-nikkiwang" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="problem1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hw3-nikkiwang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hw3-nikkiwang" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="problem2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hw3-nikkiwang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hw3-nikkiwang" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="problem3" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549430967241" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="problem2" />
+      <recent name="problem1" />
+      <recent name="problem3" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.ActorTest">
+    <configuration name="ActorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw3-nikkiwang" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="problem1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="problem1" />
+      <option name="MAIN_CLASS_NAME" value="problem1.ActorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConferenceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw3-nikkiwang" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="problem3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="problem3" />
+      <option name="MAIN_CLASS_NAME" value="problem3.ConferenceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JournalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw3-nikkiwang" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="problem3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="problem3" />
+      <option name="MAIN_CLASS_NAME" value="problem3.JournalTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LocationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw3-nikkiwang" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="problem3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="problem3" />
+      <option name="MAIN_CLASS_NAME" value="problem3.LocationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TechnicalReportTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw3-nikkiwang" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="problem3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="problem3" />
+      <option name="MAIN_CLASS_NAME" value="problem3.TechnicalReportTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ActorTest" />
+        <item itemvalue="JUnit.TechnicalReportTest" />
+        <item itemvalue="JUnit.LocationTest" />
+        <item itemvalue="JUnit.JournalTest" />
+        <item itemvalue="JUnit.ConferenceTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="59d24b45-18fa-457f-882a-96168b50734c" name="Default Changelist" comment="" />
+      <created>1548649522662</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1548649522662</updated>
+      <workItem from="1548649526058" duration="1710000" />
+      <workItem from="1548651704195" duration="11632000" />
+      <workItem from="1548764483907" duration="8661000" />
+      <workItem from="1548781353796" duration="4763000" />
+      <workItem from="1548832428771" duration="11694000" />
+      <workItem from="1549303965218" duration="1896000" />
+      <workItem from="1549333106315" duration="3000" />
+      <workItem from="1549430023530" duration="1114000" />
+      <workItem from="1549949126307" duration="5523000" />
+      <workItem from="1551248760758" duration="614000" />
+      <workItem from="1551328391248" duration="608000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="ActorTest - 2019.02.05 at 21h 16m 19s.xml">
+      <configuration name="ActorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ActorTest - 2019.02.05 at 21h 16m 32s.xml">
+      <configuration name="ActorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ActorTest - 2019.02.05 at 21h 17m 28s.xml">
+      <configuration name="ActorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ActorTest - 2019.02.05 at 21h 17m 34s.xml">
+      <configuration name="ActorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ActorTest - 2019.02.05 at 21h 17m 45s.xml">
+      <configuration name="ActorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ActorTest - 2019.02.05 at 21h 17m 54s.xml">
+      <configuration name="ActorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ActorTest - 2019.02.05 at 21h 18m 02s.xml">
+      <configuration name="ActorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ActorTest - 2019.02.05 at 21h 18m 07s.xml">
+      <configuration name="ActorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ActorTest - 2019.02.05 at 21h 18m 15s.xml">
+      <configuration name="ActorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ActorTest - 2019.02.05 at 21h 18m 25s.xml">
+      <configuration name="ActorTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="48218000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="235" y="23" width="1440" height="827" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32904148" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3293578" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3154952" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.399361" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3293578" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.063439064" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.027522936" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="PlantUML" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" weight="0.3297568" />
+      <window_info anchor="right" id="Maven Projects" order="9" />
+      <window_info anchor="right" id="Maven" order="10" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="uml://JAVA/problem1">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>problem1</OriginalElement>
+          <nodes>
+            <node x="1684.0" y="368.0">problem1.Painter</node>
+            <node x="2061.0" y="368.0">problem1.Musician</node>
+            <node x="0.0" y="713.0">problem1.Dancer</node>
+            <node x="604.0" y="301.0">problem1.AbstractADF</node>
+            <node x="1265.0" y="368.0">problem1.Photographer</node>
+            <node x="1243.0" y="713.0">problem1.Filmmaker</node>
+            <node x="2449.0" y="368.0">problem1.Poet</node>
+            <node x="626.0" y="713.0">problem1.Actor</node>
+            <node x="1662.0" y="0.0">problem1.AbstractArtist</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="problem1.Musician" target="problem1.AbstractArtist">
+              <point x="0.0" y="-114.0" />
+              <point x="2245.0" y="281.0" />
+              <point x="1942.6999999999998" y="281.0" />
+              <point x="80.19999999999982" y="125.5" />
+            </edge>
+            <edge source="problem1.Filmmaker" target="problem1.AbstractADF">
+              <point x="0.0" y="-114.0" />
+              <point x="1555.0" y="688.0" />
+              <point x="1138.1666666666665" y="688.0" />
+              <point x="213.66666666666652" y="181.0" />
+            </edge>
+            <edge source="problem1.Dancer" target="problem1.AbstractADF">
+              <point x="0.0" y="-114.0" />
+              <point x="303.0" y="688.0" />
+              <point x="710.8333333333334" y="688.0" />
+              <point x="-213.66666666666663" y="181.0" />
+            </edge>
+            <edge source="problem1.Painter" target="problem1.AbstractArtist">
+              <point x="0.0" y="-114.0" />
+              <point x="0.0" y="125.5" />
+            </edge>
+            <edge source="problem1.AbstractADF" target="problem1.AbstractArtist">
+              <point x="0.0" y="-181.0" />
+              <point x="924.5" y="271.0" />
+              <point x="1702.1" y="271.0" />
+              <point x="-160.4000000000001" y="125.5" />
+            </edge>
+            <edge source="problem1.Poet" target="problem1.AbstractArtist">
+              <point x="0.0" y="-114.0" />
+              <point x="2620.0" y="271.0" />
+              <point x="2022.8999999999999" y="271.0" />
+              <point x="160.39999999999986" y="125.5" />
+            </edge>
+            <edge source="problem1.Actor" target="problem1.AbstractADF">
+              <point x="0.0" y="-114.0" />
+              <point x="0.0" y="181.0" />
+            </edge>
+            <edge source="problem1.Photographer" target="problem1.AbstractArtist">
+              <point x="0.0" y="-114.0" />
+              <point x="1464.5" y="281.0" />
+              <point x="1782.3" y="281.0" />
+              <point x="-80.20000000000005" y="125.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="259.0" y="240.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/problem3">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>problem3</OriginalElement>
+          <nodes>
+            <node x="759.0" y="191.5">problem3.Conference</node>
+            <node x="377.0" y="191.0">problem3.TechnicalReport</node>
+            <node x="133.0" y="422.0">problem3.Location</node>
+            <node x="0.0" y="422.0">problem3.Month</node>
+            <node x="0.0" y="191.5">problem3.Journal</node>
+            <node x="400.5" y="0.0">problem3.AbstractPublication</node>
+            <node x="395.0" y="422.0">problem3.Author</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="problem3.Journal" target="problem3.AbstractPublication">
+              <point x="0.0" y="-92.5" />
+              <point x="178.5" y="166.0" />
+              <point x="453.0" y="166.0" />
+              <point x="-105.0" y="70.5" />
+            </edge>
+            <edge source="problem3.TechnicalReport" target="problem3.AbstractPublication">
+              <point x="0.0" y="-93.0" />
+              <point x="0.0" y="70.5" />
+            </edge>
+            <edge source="problem3.Conference" target="problem3.AbstractPublication">
+              <point x="0.0" y="-92.5" />
+              <point x="968.5" y="166.0" />
+              <point x="663.0" y="166.0" />
+              <point x="105.0" y="70.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.4006677796327212" x="589.0" y="358.0" />
+          <SelectedNodes>
+            <node>problem3.Conference</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem2/BusAndTruck.java" />
+    <entry file="file://$PROJECT_DIR$/src/problem2/BusAndTruckTest.java" />
+    <entry file="uml://JAVA/problem2">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>problem2</OriginalElement>
+          <nodes>
+            <node x="463.0" y="486.0">problem2.InvalidDecelerationException</node>
+            <node x="434.0" y="235.0">problem2.Bus</node>
+            <node x="620.0" y="0.0">problem2.AbstractVehicle</node>
+            <node x="0.0" y="486.0">problem2.Direction</node>
+            <node x="1324.0" y="235.0">problem2.Automobile</node>
+            <node x="857.0" y="235.0">problem2.Motorcycle</node>
+            <node x="803.0" y="486.0">problem2.InvalidAccelerationException</node>
+            <node x="160.0" y="486.0">problem2.MakeAndModel</node>
+            <node x="0.0" y="235.0">problem2.Truck</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="problem2.Motorcycle" target="problem2.AbstractVehicle">
+              <point x="0.0" y="-103.0" />
+              <point x="1080.5" y="215.0" />
+              <point x="917.5" y="215.0" />
+              <point x="59.5" y="92.5" />
+            </edge>
+            <edge source="problem2.Bus" target="problem2.AbstractVehicle">
+              <point x="0.0" y="-103.0" />
+              <point x="635.5" y="215.0" />
+              <point x="798.5" y="215.0" />
+              <point x="-59.5" y="92.5" />
+            </edge>
+            <edge source="problem2.Truck" target="problem2.AbstractVehicle">
+              <point x="0.0" y="-103.0" />
+              <point x="207.0" y="205.0" />
+              <point x="679.5" y="205.0" />
+              <point x="-178.5" y="92.5" />
+            </edge>
+            <edge source="problem2.Automobile" target="problem2.AbstractVehicle">
+              <point x="0.0" y="-103.0" />
+              <point x="1548.5" y="205.0" />
+              <point x="1036.5" y="205.0" />
+              <point x="178.5" y="92.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="810.0" y="328.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem1/Filmmaker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem1/Musician.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem1/MusicianTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="23" column="72" selection-start-line="20" selection-start-column="3" selection-end-line="23" selection-end-column="72" />
+          <folding>
+            <element signature="e#1053#1054#0" expanded="true" />
+            <element signature="e#1114#1115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem1/Name.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem1/NameTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem1/Painter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem1/PainterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem1/Photographer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem1/PhotographerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem1/Poet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem1/PoetTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem2/Automobile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem2/AutomobileTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2096#2097#0" expanded="true" />
+            <element signature="e#2171#2172#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem2/InvalidDecelerationException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem2/MakeAndModelTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem2/Motorcycle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem2/Truck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem2/TruckTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem3/Author.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem3/LocationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+          <folding>
+            <element signature="e#587#588#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem3/TechnicalReportTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem1/Genre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" selection-start-line="2" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem1/FilmmakerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem2/MotorcycleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem1/AbstractADF.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2584">
+          <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem1/Actor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem1/ActorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="57" column="53" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem1/Dancer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem1/DancerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem2/AbstractVehicle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="163" column="1" selection-start-line="163" selection-start-column="1" selection-end-line="163" selection-end-column="1" />
+          <folding>
+            <element signature="e#1628#1629#0" expanded="true" />
+            <element signature="e#1673#1674#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem3/AbstractPublication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem2/MakeAndModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" selection-start-line="12" selection-end-line="15" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem2/Bus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem2/BusTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="46" column="42" selection-start-line="7" selection-end-line="65" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem2/InvalidAccelerationException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem2/Direction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem3/TechnicalReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1178">
+          <caret line="70" column="34" selection-start-line="70" selection-start-column="34" selection-end-line="70" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem3/Month.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem3/Location.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem3/JournalTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="18" column="63" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem3/Journal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem3/ConferenceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="15" column="43" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1023#1024#0" expanded="true" />
+            <element signature="e#1079#1080#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem3/Conference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem3/AuthorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem1/AbstractArtist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="5" selection-start-line="5" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

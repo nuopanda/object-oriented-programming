@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>ConsNode.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CS5004 Assignment</a> &gt; <a href="index.source.html" class="el_package">edu.neu.ccs.cs5004.assignment5.problem1</a> &gt; <span class="el_source">ConsNode.java</span></div><h1>ConsNode.java</h1><pre class="source lang-java linenums">package edu.neu.ccs.cs5004.assignment5.problem1;
+
+import java.util.Objects;
+
+/**
+ * Represents a Node of at least one element.
+ */
+public class ConsNode implements Node {
+
+  private Integer priority;
+  private String value;
+
+  /**
+   * Create a new ConsNode with priority and value.
+   *
+   * @param priority -- the priority of the node
+   * @param value -- the value of the node
+   */
+<span class="fc" id="L19">  public ConsNode(Integer priority, String value) {</span>
+<span class="fc" id="L20">    this.priority = priority;</span>
+<span class="fc" id="L21">    this.value = value;</span>
+<span class="fc" id="L22">  }</span>
+
+  @Override
+  public Integer getPriority() {
+<span class="fc" id="L26">    return this.priority;</span>
+  }
+
+  @Override
+  public String getValue() {
+<span class="fc" id="L31">    return this.value;</span>
+  }
+
+  @Override
+  public boolean equals(Object object) {
+<span class="fc bfc" id="L36" title="All 2 branches covered.">    if (this == object) {</span>
+<span class="fc" id="L37">      return true;</span>
+    }
+<span class="fc bfc" id="L39" title="All 4 branches covered.">    if (object == null || getClass() != object.getClass()) {</span>
+<span class="fc" id="L40">      return false;</span>
+    }
+<span class="fc" id="L42">    ConsNode consNode = (ConsNode) object;</span>
+<span class="pc bpc" id="L43" title="1 of 2 branches missed.">    return Objects.equals(priority, consNode.priority)</span>
+<span class="pc bpc" id="L44" title="1 of 2 branches missed.">        &amp;&amp; Objects.equals(value, consNode.value);</span>
+  }
+
+  @Override
+  public int hashCode() {
+<span class="fc" id="L49">    return Objects.hash(priority, value);</span>
+  }
+
+  @Override
+  public String toString() {
+<span class="fc" id="L54">    return &quot;ConsNode{&quot;</span>
+        + &quot;priority=&quot; + priority
+        + &quot;, value='&quot; + value + '\''
+        + '}';
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

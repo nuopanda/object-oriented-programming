@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Bank.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CS5004 Assignment</a> &gt; <a href="index.source.html" class="el_package">edu.neu.ccs.cs5004</a> &gt; <span class="el_source">Bank.java</span></div><h1>Bank.java</h1><pre class="source lang-java linenums">package edu.neu.ccs.cs5004;
+
+import java.math.BigInteger;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Random;
+
+
+/**
+ * The class Bank.
+ */
+public class Bank {
+
+<span class="fc" id="L15">  private static final Integer DEPOSIT_LIMIT_BOUND = 2001;</span>
+<span class="fc" id="L16">  private static final Integer WITHDRAWAL_LIMIT_BOUND = 3001;</span>
+<span class="fc" id="L17">  private static final Integer ZERO = 0;</span>
+<span class="fc" id="L18">  private static final Integer FIVE = 5;</span>
+<span class="fc" id="L19">  private static final Integer TEN = 10;</span>
+  private Map&lt;Integer, Key&gt; clientKey;
+  private Map&lt;Integer, Integer&gt; clientWithdrawal;
+  private Map&lt;Integer, Integer&gt; clientDeposit;
+
+
+  /**
+   * Instantiates a new Bank.
+   */
+<span class="fc" id="L28">  public Bank() {</span>
+<span class="fc" id="L29">    this.clientKey = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L30">    this.clientDeposit = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L31">    this.clientWithdrawal = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L32">  }</span>
+
+  /**
+   * Instantiates a new Bank.
+   *
+   * @param clientKey the client key
+   * @param clientWithdrawal the client withdrawal
+   * @param clientDeposit the client deposit
+   */
+  public Bank(Map&lt;Integer, Key&gt; clientKey, Map&lt;Integer, Integer&gt; clientWithdrawal,
+<span class="fc" id="L42">      Map&lt;Integer, Integer&gt; clientDeposit) {</span>
+<span class="fc" id="L43">    this.clientKey = clientKey;</span>
+<span class="fc" id="L44">    this.clientDeposit = clientWithdrawal;</span>
+<span class="fc" id="L45">    this.clientWithdrawal = clientDeposit;</span>
+<span class="fc" id="L46">  }</span>
+
+  /**
+   * Gets client key.
+   *
+   * @return the client key
+   */
+  public Map&lt;Integer, Key&gt; getClientKey() {
+<span class="fc" id="L54">    return clientKey;</span>
+  }
+
+  /**
+   * Gets client withdrawal.
+   *
+   * @return the client withdrawal
+   */
+  public Map&lt;Integer, Integer&gt; getClientWithdrawal() {
+<span class="fc" id="L63">    return clientWithdrawal;</span>
+  }
+
+  /**
+   * Gets client deposit.
+   *
+   * @return the client deposit
+   */
+  public Map&lt;Integer, Integer&gt; getClientDeposit() {
+<span class="fc" id="L72">    return clientDeposit;</span>
+  }
+
+  /**
+   * Add client.
+   *
+   * @param number the id
+   * @param publicKey the public key
+   */
+  public void addClient(Integer number, Key publicKey) {
+<span class="fc" id="L82">    clientKey.put(number, publicKey);</span>
+<span class="fc" id="L83">    Random random = new Random();</span>
+<span class="fc" id="L84">    clientDeposit.put(number, random.nextInt(DEPOSIT_LIMIT_BOUND));</span>
+<span class="fc" id="L85">    clientWithdrawal.put(number, random.nextInt(WITHDRAWAL_LIMIT_BOUND));</span>
+<span class="fc" id="L86">  }</span>
+
+  /**
+   * Verify signature boolean.
+   *
+   * @param pair the pair
+   * @param number the id num
+   * @return the boolean
+   */
+  public boolean verifySignature(MessageSignPair pair, Integer number) {
+<span class="fc bfc" id="L96" title="All 2 branches covered.">    if (!clientKey.containsKey(number)) {</span>
+<span class="fc" id="L97">      throw new IllegalArgumentException(&quot;the client doesn't exist&quot;);</span>
+    }
+<span class="fc" id="L99">    Key publicKey = clientKey.get(number);</span>
+<span class="fc" id="L100">    BigInteger numB = publicKey.getKeyCom1();</span>
+<span class="fc" id="L101">    BigInteger numN = publicKey.getKeyCom2();</span>
+<span class="fc" id="L102">    BigInteger msg = pair.getSignature().modPow(numB, numN);</span>
+<span class="fc bfc" id="L103" title="All 2 branches covered.">    return pair.getMessage() == msg.intValue();</span>
+  }
+
+  /**
+   * Do transaction boolean.
+   *
+   * @param pair the pair
+   * @param number the id num
+   * @return the boolean
+   */
+  public boolean doTransaction(MessageSignPair pair, Integer number) {
+<span class="fc" id="L114">    Integer msg = pair.getMessage();</span>
+<span class="fc" id="L115">    int lastDigit = msg % TEN;</span>
+<span class="fc" id="L116">    int amount = msg / TEN;</span>
+<span class="pc bpc" id="L117" title="1 of 4 branches missed.">    if (lastDigit &gt;= ZERO &amp;&amp; lastDigit &lt; FIVE) {</span>
+      // deposit
+<span class="fc bfc" id="L119" title="All 2 branches covered.">      if (!clientDeposit.containsKey(number)) {</span>
+<span class="fc" id="L120">        return false;</span>
+      }
+<span class="fc bfc" id="L122" title="All 2 branches covered.">      if (clientDeposit.get(number) &gt;= amount) {</span>
+<span class="fc" id="L123">        clientDeposit.put(number, clientDeposit.get(number) - amount);</span>
+<span class="fc" id="L124">        return true;</span>
+      }
+<span class="pc bpc" id="L126" title="2 of 4 branches missed.">    } else if (TEN &gt; lastDigit &amp;&amp; lastDigit &gt;= FIVE) {</span>
+      // withdraw
+<span class="fc bfc" id="L128" title="All 2 branches covered.">      if (!clientWithdrawal.containsKey(number)) {</span>
+<span class="fc" id="L129">        return false;</span>
+      }
+<span class="fc bfc" id="L131" title="All 2 branches covered.">      if (clientWithdrawal.get(number) &gt;= amount) {</span>
+<span class="fc" id="L132">        clientWithdrawal.put(number, clientWithdrawal.get(number) - amount);</span>
+<span class="fc" id="L133">        return true;</span>
+      }
+    }
+<span class="fc" id="L136">    return false;</span>
+  }
+
+  @Override
+  public String toString() {
+<span class="fc" id="L141">    return &quot;Bank{&quot;</span>
+        + &quot;clientKey=&quot; + clientKey
+        + &quot;, clientWithdrawal=&quot; + clientWithdrawal
+        + &quot;, clientDeposit=&quot; + clientDeposit
+        + '}';
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+<span class="fc bfc" id="L150" title="All 2 branches covered.">    if (this == obj) {</span>
+<span class="fc" id="L151">      return true;</span>
+    }
+<span class="fc bfc" id="L153" title="All 4 branches covered.">    if (obj == null || getClass() != obj.getClass()) {</span>
+<span class="fc" id="L154">      return false;</span>
+    }
+<span class="fc" id="L156">    Bank bank = (Bank) obj;</span>
+<span class="fc bfc" id="L157" title="All 2 branches covered.">    return Objects.equals(clientKey, bank.clientKey)</span>
+<span class="fc bfc" id="L158" title="All 2 branches covered.">        &amp;&amp; Objects.equals(clientWithdrawal, bank.clientWithdrawal)</span>
+<span class="pc bpc" id="L159" title="1 of 2 branches missed.">        &amp;&amp; Objects.equals(clientDeposit, bank.clientDeposit);</span>
+  }
+
+  @Override
+  public int hashCode() {
+<span class="fc" id="L164">    return Objects.hash(clientKey, clientWithdrawal, clientDeposit);</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

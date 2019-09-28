@@ -1,0 +1,25 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+CS5004 Assignment,edu.neu.ccs.cs5004.assignment4.problem2,FutureGameException,0,4,0,0,0,2,0,1,0,1
+CS5004 Assignment,edu.neu.ccs.cs5004.assignment4.problem2,TiedGameException,0,4,0,0,0,2,0,1,0,1
+CS5004 Assignment,edu.neu.ccs.cs5004.assignment4.problem2,BaseballTeam,0,63,2,8,0,19,2,5,0,2
+CS5004 Assignment,edu.neu.ccs.cs5004.assignment4.problem2,Record,0,67,0,0,0,16,0,8,0,8
+CS5004 Assignment,edu.neu.ccs.cs5004.assignment4.problem2,TieResult,9,29,0,0,0,2,2,2,2,2
+CS5004 Assignment,edu.neu.ccs.cs5004.assignment4.problem2,Game,0,119,0,12,0,41,0,19,0,13
+CS5004 Assignment,edu.neu.ccs.cs5004.assignment4.problem2,SoccerTeam,0,36,0,0,0,7,0,2,0,2
+CS5004 Assignment,edu.neu.ccs.cs5004.assignment4.problem2,Date,0,32,0,8,0,8,0,7,0,3
+CS5004 Assignment,edu.neu.ccs.cs5004.assignment4.problem2,AmericanFootballTeam,0,5,0,0,0,2,0,1,0,1
+CS5004 Assignment,edu.neu.ccs.cs5004.assignment4.problem2,InvalidGameException,0,4,0,0,0,2,0,1,0,1
+CS5004 Assignment,edu.neu.ccs.cs5004.assignment4.problem2,League,7,189,8,20,1,44,8,14,0,8
+CS5004 Assignment,edu.neu.ccs.cs5004.assignment4.problem2,Team,8,165,3,15,2,52,3,21,0,15
+CS5004 Assignment,edu.neu.ccs.cs5004.assignment4.problem2,TiedTeamsException,0,4,0,0,0,2,0,1,0,1
+CS5004 Assignment,edu.neu.ccs.cs5004.assignment4.problem1,UnavailableSpotException,0,4,0,0,0,2,0,1,0,1
+CS5004 Assignment,edu.neu.ccs.cs5004.assignment4.problem1,Vehicle,0,23,0,0,0,10,0,5,0,5
+CS5004 Assignment,edu.neu.ccs.cs5004.assignment4.problem1,InvalidSpotTypeException,0,4,0,0,0,2,0,1,0,1
+CS5004 Assignment,edu.neu.ccs.cs5004.assignment4.problem1,ParkingSpot,0,33,0,0,0,14,0,7,0,7
+CS5004 Assignment,edu.neu.ccs.cs5004.assignment4.problem1,ParkingStatus,9,29,0,0,0,2,2,2,2,2
+CS5004 Assignment,edu.neu.ccs.cs5004.assignment4.problem1,UsageType,9,29,0,0,0,2,2,2,2,2
+CS5004 Assignment,edu.neu.ccs.cs5004.assignment4.problem1,VehicleSize,9,48,0,0,0,6,2,3,2,3
+CS5004 Assignment,edu.neu.ccs.cs5004.assignment4.problem1,InvalidSpotSizeException,0,4,0,0,0,2,0,1,0,1
+CS5004 Assignment,edu.neu.ccs.cs5004.assignment4.problem1,VehicleType,9,29,0,0,0,2,2,2,2,2
+CS5004 Assignment,edu.neu.ccs.cs5004.assignment4.problem1,ParkingManager,6,67,3,11,3,19,3,9,0,5
+CS5004 Assignment,edu.neu.ccs.cs5004.assignment4.problem1,SpotSize,9,48,0,0,0,6,2,3,2,3

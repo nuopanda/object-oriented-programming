@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="/Users/nuopanda/Documents/GitHub/Student_repo_Nuozhou_Wang/Assignment5/src/main/java/edu/neu/ccs/cs5004/assignment5/problem1/AbstractPriorityQueue.java">
+</file>
+<file name="/Users/nuopanda/Documents/GitHub/Student_repo_Nuozhou_Wang/Assignment5/src/main/java/edu/neu/ccs/cs5004/assignment5/problem1/Cons.java">
+</file>
+<file name="/Users/nuopanda/Documents/GitHub/Student_repo_Nuozhou_Wang/Assignment5/src/main/java/edu/neu/ccs/cs5004/assignment5/problem1/ConsNode.java">
+</file>
+<file name="/Users/nuopanda/Documents/GitHub/Student_repo_Nuozhou_Wang/Assignment5/src/main/java/edu/neu/ccs/cs5004/assignment5/problem1/Empty.java">
+</file>
+<file name="/Users/nuopanda/Documents/GitHub/Student_repo_Nuozhou_Wang/Assignment5/src/main/java/edu/neu/ccs/cs5004/assignment5/problem1/EmptyNode.java">
+</file>
+<file name="/Users/nuopanda/Documents/GitHub/Student_repo_Nuozhou_Wang/Assignment5/src/main/java/edu/neu/ccs/cs5004/assignment5/problem1/InvalidPeekException.java">
+</file>
+<file name="/Users/nuopanda/Documents/GitHub/Student_repo_Nuozhou_Wang/Assignment5/src/main/java/edu/neu/ccs/cs5004/assignment5/problem1/InvalidPopException.java">
+</file>
+<file name="/Users/nuopanda/Documents/GitHub/Student_repo_Nuozhou_Wang/Assignment5/src/main/java/edu/neu/ccs/cs5004/assignment5/problem1/Node.java">
+</file>
+<file name="/Users/nuopanda/Documents/GitHub/Student_repo_Nuozhou_Wang/Assignment5/src/main/java/edu/neu/ccs/cs5004/assignment5/problem1/PriorityQueue.java">
+</file>
+<file name="/Users/nuopanda/Documents/GitHub/Student_repo_Nuozhou_Wang/Assignment5/src/main/java/edu/neu/ccs/cs5004/assignment5/problem2/AbstractBagOfWordList.java">
+</file>
+<file name="/Users/nuopanda/Documents/GitHub/Student_repo_Nuozhou_Wang/Assignment5/src/main/java/edu/neu/ccs/cs5004/assignment5/problem2/BagOfWordsList.java">
+</file>
+<file name="/Users/nuopanda/Documents/GitHub/Student_repo_Nuozhou_Wang/Assignment5/src/main/java/edu/neu/ccs/cs5004/assignment5/problem2/Cons.java">
+</file>
+<file name="/Users/nuopanda/Documents/GitHub/Student_repo_Nuozhou_Wang/Assignment5/src/main/java/edu/neu/ccs/cs5004/assignment5/problem2/Empty.java">
+</file>
+</checkstyle>

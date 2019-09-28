@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>SecureBankVerificationSimulator.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CS5004 Assignment</a> &gt; <a href="index.source.html" class="el_package">edu.neu.ccs.cs5004</a> &gt; <span class="el_source">SecureBankVerificationSimulator.java</span></div><h1>SecureBankVerificationSimulator.java</h1><pre class="source lang-java linenums">package edu.neu.ccs.cs5004;
+
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
+import java.util.stream.Collectors;
+
+/**
+ * The class Secure bank verification simulator.
+ */
+public class SecureBankVerificationSimulator {
+
+<span class="fc" id="L22">  private static final Integer CLIENT_NUM_BOUND = 50000;</span>
+<span class="fc" id="L23">  private static final Integer VERIFICATION_NUM_BOUND = 10000;</span>
+  private static final double PERCENT_LOWER_BOUND = 0;
+  private static final double PERCENT_UPPER_BOUND = 100;
+<span class="fc" id="L26">  private static final Integer ARGUMENT_NUMBER = 4;</span>
+<span class="fc" id="L27">  private static final Integer ONE = 1;</span>
+<span class="fc" id="L28">  private Random random = new Random();</span>
+  private Bank bank;
+
+
+  /**
+   * Instantiates a new Secure bank verification simulator.
+   */
+<span class="fc" id="L35">  public SecureBankVerificationSimulator() {</span>
+<span class="fc" id="L36">    bank = new Bank();</span>
+
+<span class="fc" id="L38">  }</span>
+
+  /**
+   * Parse command line.
+   *
+   * @param args the args
+   * @return the parse result
+   */
+  public ParseResult parseCommandLine(String[] args) {
+<span class="fc bfc" id="L47" title="All 2 branches covered.">    if (args.length != ARGUMENT_NUMBER) {</span>
+<span class="fc" id="L48">      throw new InvalidArgumentsException(&quot;invalid input number&quot;);</span>
+    }
+<span class="fc bfc" id="L50" title="All 2 branches covered.">    if (Integer.parseInt(args[0]) &gt; CLIENT_NUM_BOUND) {</span>
+<span class="fc" id="L51">      throw new InvalidArgumentsException(&quot;the client number exceeds the maximum value&quot;);</span>
+    }
+<span class="fc" id="L53">    Integer clientNum = Integer.parseInt(args[0]);</span>
+<span class="fc bfc" id="L54" title="All 2 branches covered.">    if (Integer.parseInt(args[1]) &gt; VERIFICATION_NUM_BOUND) {</span>
+<span class="fc" id="L55">      throw new InvalidArgumentsException(</span>
+          &quot;the unique verification number exceeds the maximum value&quot;);
+    }
+<span class="fc" id="L58">    Integer verificationNum = Integer.parseInt(args[1]);</span>
+
+<span class="pc bpc" id="L60" title="1 of 2 branches missed.">    if (Double.valueOf(args[2]) &lt; PERCENT_LOWER_BOUND</span>
+<span class="pc bpc" id="L61" title="1 of 2 branches missed.">        || Double.valueOf(args[2]) &gt; PERCENT_UPPER_BOUND) {</span>
+<span class="nc" id="L62">      throw new InvalidArgumentsException(&quot;invalid percentage&quot;);</span>
+    }
+<span class="fc" id="L64">    Double invalidPercent = Double.valueOf(args[2]);</span>
+<span class="fc" id="L65">    String output = args[3];</span>
+<span class="fc" id="L66">    return new ParseResult(clientNum, verificationNum, invalidPercent, output);</span>
+  }
+
+  /**
+   * Generate client.
+   *
+   * @param parseResult the parse result
+   * @return the client list
+   */
+  public ClientInfoList generateClient(ParseResult parseResult) {
+<span class="fc" id="L76">    List&lt;Integer&gt; clientList = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L77">    Map&lt;Integer, Client&gt; clientMap = new HashMap&lt;&gt;();</span>
+<span class="fc bfc" id="L78" title="All 2 branches covered.">    for (int i = 0; i &lt; parseResult.getClientNum(); i++) {</span>
+<span class="fc" id="L79">      Integer number = random.nextInt(Integer.MAX_VALUE) + ONE;</span>
+<span class="pc bpc" id="L80" title="1 of 2 branches missed.">      while (clientList.contains(number)) {</span>
+<span class="nc" id="L81">        number = random.nextInt(Integer.MAX_VALUE) + ONE;</span>
+      }
+<span class="fc" id="L83">      Client client = new Client(number, new RsaPair());</span>
+<span class="fc" id="L84">      bank.addClient(number, client.getPair().getPublicKey());</span>
+<span class="fc" id="L85">      clientList.add(number);</span>
+<span class="fc" id="L86">      clientMap.put(number, client);</span>
+    }
+<span class="fc" id="L88">    return new ClientInfoList(clientList, clientMap);</span>
+  }
+
+  /**
+   * Generate client signature map.
+   *
+   * @param clientInfoList the client info list
+   * @param parseResult the parse result
+   * @return the map
+   */
+  public Map&lt;Integer, List&lt;MessageSignPair&gt;&gt; generateClientSignatureMap(
+      ClientInfoList clientInfoList, ParseResult parseResult) {
+<span class="fc" id="L100">    Map&lt;Integer, List&lt;MessageSignPair&gt;&gt; clientSignatureMap = new HashMap&lt;&gt;();</span>
+<span class="pc bpc" id="L101" title="1 of 4 branches missed.">    if (clientInfoList.getClientList().size() &lt;= 0 || clientInfoList.getClientMap().size() &lt;= 0) {</span>
+<span class="fc" id="L102">      throw new IllegalArgumentException(&quot;should generateClient first&quot;);</span>
+    }
+<span class="fc bfc" id="L104" title="All 2 branches covered.">    for (int i = 0; i &lt; parseResult.getVerificationNum(); i++) {</span>
+<span class="fc" id="L105">      Integer number = clientInfoList.getClientList()</span>
+<span class="fc" id="L106">          .get(random.nextInt(clientInfoList.getClientList().size()));</span>
+<span class="fc" id="L107">      Client client = clientInfoList.getClientMap().get(number);</span>
+<span class="fc" id="L108">      MessageSignPair messageSignPair = new MessageSignPair(client,</span>
+<span class="fc" id="L109">          parseResult.getInvalidPercent());</span>
+<span class="fc bfc" id="L110" title="All 2 branches covered.">      if (!clientSignatureMap.containsKey(number)) {</span>
+<span class="fc" id="L111">        clientSignatureMap.put(number, new ArrayList&lt;&gt;());</span>
+      }
+<span class="fc" id="L113">      clientSignatureMap.get(number).add(messageSignPair);</span>
+    }
+<span class="fc" id="L115">    return clientSignatureMap;</span>
+  }
+
+  /**
+   * Write output.
+   *
+   * @param parseResult the parse result
+   * @param clientSignatureMap the client signature map
+   */
+  public void writeOutput(ParseResult parseResult,
+      Map&lt;Integer, List&lt;MessageSignPair&gt;&gt; clientSignatureMap) {
+<span class="fc" id="L126">    OutputStreamWriter writer = null;</span>
+    try {
+<span class="fc" id="L128">      FileOutputStream fileOutputStream = new FileOutputStream(parseResult.getOutput() + &quot;.csv&quot;);</span>
+<span class="fc" id="L129">      writer = new OutputStreamWriter(fileOutputStream, &quot;UTF-8&quot;);</span>
+<span class="fc" id="L130">      List&lt;String&gt; list = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L131">      list.add(&quot;Transaction number – Date&quot;);</span>
+<span class="fc" id="L132">      list.add(&quot;Time&quot;);</span>
+<span class="fc" id="L133">      list.add(&quot;Client ID&quot;);</span>
+<span class="fc" id="L134">      list.add(&quot;Message&quot;);</span>
+<span class="fc" id="L135">      list.add(&quot;Digital signature&quot;);</span>
+<span class="fc" id="L136">      list.add(&quot;Verified&quot;);</span>
+<span class="fc" id="L137">      list.add(&quot;Transactions status&quot;);</span>
+<span class="fc" id="L138">      String line = list.stream().collect(Collectors.joining(&quot;,&quot;));</span>
+<span class="fc" id="L139">      writer.write(line);</span>
+<span class="fc" id="L140">      writer.write(System.getProperty(&quot;line.separator&quot;));</span>
+<span class="fc" id="L141">      int current = 1;</span>
+<span class="fc bfc" id="L142" title="All 2 branches covered.">      for (Map.Entry&lt;Integer, List&lt;MessageSignPair&gt;&gt; entry : clientSignatureMap.entrySet()) {</span>
+<span class="fc" id="L143">        Integer number = entry.getKey();</span>
+<span class="fc" id="L144">        List&lt;MessageSignPair&gt; pairs = entry.getValue();</span>
+<span class="fc bfc" id="L145" title="All 2 branches covered.">        for (int i = 0; i &lt; pairs.size(); i++) {</span>
+<span class="fc" id="L146">          List&lt;String&gt; newList = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L147">          LocalDate today = LocalDate.now();</span>
+<span class="fc" id="L148">          Calendar cal = Calendar.getInstance();</span>
+<span class="fc" id="L149">          SimpleDateFormat sdf = new SimpleDateFormat(&quot;HH:mm:ss&quot;);</span>
+<span class="fc" id="L150">          newList.add(current + &quot;/-&quot; + today);</span>
+<span class="fc" id="L151">          current++;</span>
+<span class="fc" id="L152">          newList.add(sdf.format(cal.getTime()));</span>
+<span class="fc" id="L153">          newList.add(String.valueOf(number));</span>
+<span class="fc" id="L154">          newList.add(String.valueOf(pairs.get(i).getMessage()));</span>
+<span class="fc" id="L155">          newList.add(pairs.get(i).getSignature() + &quot;&quot;);</span>
+<span class="fc" id="L156">          boolean verification = bank.verifySignature(pairs.get(i), number);</span>
+<span class="fc" id="L157">          newList.add(String.valueOf(verification));</span>
+<span class="pc bpc" id="L158" title="1 of 2 branches missed.">          if (verification) {</span>
+<span class="fc" id="L159">            boolean transaction = bank.doTransaction(pairs.get(i), number);</span>
+<span class="fc" id="L160">            newList.add(String.valueOf(transaction));</span>
+<span class="fc" id="L161">          } else {</span>
+<span class="nc" id="L162">            newList.add(&quot;false&quot;);</span>
+          }
+<span class="fc" id="L164">          String newLine = newList.stream().collect(Collectors.joining(&quot;,&quot;));</span>
+<span class="fc" id="L165">          writer.write(newLine);</span>
+<span class="fc" id="L166">          writer.write(System.getProperty(&quot;line.separator&quot;));</span>
+        }
+<span class="fc" id="L168">      }</span>
+<span class="nc" id="L169">    } catch (IOException ioe) {</span>
+<span class="nc" id="L170">      System.out.println(&quot;Error handling the file: &quot; + ioe.getMessage());</span>
+<span class="nc" id="L171">      ioe.printStackTrace();</span>
+    } finally {
+<span class="pc bpc" id="L173" title="5 of 6 branches missed.">      if (writer != null) {</span>
+        try {
+<span class="pc" id="L175">          writer.close();</span>
+<span class="nc" id="L176">        } catch (IOException e) {</span>
+<span class="nc" id="L177">          System.out.println(&quot;file cannot be closed&quot;);</span>
+<span class="nc" id="L178">          e.printStackTrace();</span>
+<span class="pc" id="L179">        }</span>
+      }
+<span class="nc" id="L181">    }</span>
+<span class="fc" id="L182">  }</span>
+
+  @Override
+  public String toString() {
+<span class="fc" id="L186">    return &quot;This is a Simulator&quot;;</span>
+  }
+
+  @Override
+  public int hashCode() {
+<span class="fc" id="L191">    return this.toString().hashCode();</span>
+  }
+
+  @Override
+  public boolean equals(Object object) {
+<span class="fc bfc" id="L196" title="All 2 branches covered.">    if (object == this) {</span>
+<span class="fc" id="L197">      return true;</span>
+    }
+<span class="fc bfc" id="L199" title="All 4 branches covered.">    if (object == null || this.getClass() != object.getClass()) {</span>
+<span class="fc" id="L200">      return false;</span>
+    }
+<span class="pc bpc" id="L202" title="1 of 2 branches missed.">    return this.hashCode() == object.hashCode();</span>
+  }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

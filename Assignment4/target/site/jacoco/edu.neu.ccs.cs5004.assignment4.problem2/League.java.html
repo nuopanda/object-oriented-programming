@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>League.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CS5004 Assignment</a> &gt; <a href="index.source.html" class="el_package">edu.neu.ccs.cs5004.assignment4.problem2</a> &gt; <span class="el_source">League.java</span></div><h1>League.java</h1><pre class="source lang-java linenums">package edu.neu.ccs.cs5004.assignment4.problem2;
+
+/**
+ * Represents a class League with their details -name, startMonth, endMonth, gameNumber, nextGame.
+ *
+ * @author nikkiwang
+ */
+public class League implements ILeague {
+
+  private String name;
+  private int startMonth;
+  private int endMonth;
+  private int gameNumber;
+  private Game nextGame;
+  private Game thisGame;
+
+  /**
+   * Creat a league object.
+   *
+   * @param name -- league's name
+   * @param startMonth -- league's start month
+   * @param endMonth -- league's end month
+   * @param gameNumber -- league's game number
+   * @throws Exception if the month is not valid
+   */
+  public League(String name, int startMonth, int endMonth, int gameNumber)
+<span class="fc" id="L27">      throws Exception {</span>
+<span class="pc bpc" id="L28" title="4 of 10 branches missed.">    if (startMonth &lt; 1 || startMonth &gt; 12 || endMonth &lt; 1 || endMonth &gt; 12</span>
+        || startMonth &gt; endMonth) {
+<span class="fc" id="L30">      throw new IllegalArgumentException(&quot;invalid month.&quot;);</span>
+    }
+<span class="fc" id="L32">    this.name = name;</span>
+<span class="fc" id="L33">    this.startMonth = startMonth;</span>
+<span class="fc" id="L34">    this.endMonth = endMonth;</span>
+<span class="fc" id="L35">    this.gameNumber = gameNumber;</span>
+<span class="fc" id="L36">    this.nextGame = null;</span>
+<span class="fc" id="L37">    this.thisGame = null;</span>
+<span class="fc" id="L38">  }</span>
+
+  /**
+   * get league name.
+   *
+   * @return league name
+   */
+  public String getName() {
+<span class="fc" id="L46">    return this.name;</span>
+  }
+
+  /**
+   * Set next game.
+   */
+  @Override
+  public void setNextGame(Game game) {
+<span class="fc" id="L54">    this.nextGame = game;</span>
+<span class="fc" id="L55">  }</span>
+
+  /**
+   * Get next game.
+   *
+   * @return nextGame.
+   */
+  @Override
+  public Game getNextGame() {
+<span class="fc" id="L64">    return this.nextGame;</span>
+  }
+
+  /**
+   * Get this game.
+   *
+   * @return thisGame.
+   */
+  @Override
+  public Game getThisGame() {
+<span class="fc" id="L74">    return this.thisGame;</span>
+  }
+
+  /**
+   * Compare Team.
+   *
+   * @return the winning team.
+   */
+  @Override
+  public Team compareTeam(Team team1, Team team2) throws IllegalArgumentException {
+<span class="pc bpc" id="L84" title="1 of 2 branches missed.">    if (team1.getLeague() != team2.getLeague()) {</span>
+<span class="nc" id="L85">      throw new IllegalArgumentException(&quot;Not in the same league.&quot;);</span>
+    }
+<span class="fc" id="L87">    int team1Point = team1.getPoints();</span>
+<span class="fc" id="L88">    int team2Point = team2.getPoints();</span>
+<span class="fc bfc" id="L89" title="All 2 branches covered.">    if (team1Point == team2Point) {</span>
+<span class="fc" id="L90">      int team1WinNum = team1.getRecord().getWinNum();</span>
+<span class="fc" id="L91">      int team2WinNum = team2.getRecord().getWinNum();</span>
+<span class="fc bfc" id="L92" title="All 2 branches covered.">      if (team1WinNum == team2WinNum) {</span>
+<span class="fc" id="L93">        throw new TiedTeamsException(&quot;Two teams are tied.&quot;);</span>
+      }
+<span class="pc bpc" id="L95" title="1 of 2 branches missed.">      return (team1WinNum &gt; team2WinNum) ? team1 : team2;</span>
+    }
+<span class="pc bpc" id="L97" title="1 of 2 branches missed.">    return (team1Point &gt; team2Point) ? team1 : team2;</span>
+  }
+
+  /**
+   * Schedule the next Game.
+   */
+  @Override
+  public void scheduleGame(Game game, boolean seasonOn) throws IllegalArgumentException {
+<span class="fc" id="L105">    this.setNextGame(game);</span>
+<span class="fc" id="L106">    this.nextGame.getHomeTeam().setSeasonOn(seasonOn);</span>
+<span class="fc" id="L107">    this.nextGame.getAwayTeam().setSeasonOn(seasonOn);</span>
+<span class="fc" id="L108">    this.nextGame.getAwayTeam().setGameRemaining(this.gameNumber);</span>
+<span class="fc" id="L109">    this.nextGame.getHomeTeam().setGameRemaining(this.gameNumber);</span>
+<span class="fc" id="L110">  }</span>
+
+  /**
+   * Play the game, update all information.
+   *
+   * @param game -- game
+   * @param homeTeamScore -- home team score
+   * @param awayTeamScore -- away team score
+   * @throws IllegalArgumentException if date is not within season
+   */
+  @Override
+  public void playGame(Game game, int homeTeamScore, int awayTeamScore)
+      throws IllegalArgumentException {
+<span class="pc bpc" id="L123" title="1 of 4 branches missed.">    if (game.getDate().getMonth() &lt; this.startMonth || game.getDate().getMonth() &gt; this.endMonth) {</span>
+<span class="fc" id="L124">      throw</span>
+          new IllegalArgumentException(&quot;invalid game date&quot;);
+    }
+<span class="fc" id="L127">    this.thisGame = game;</span>
+<span class="fc" id="L128">    this.thisGame.setPlayed(true, homeTeamScore, awayTeamScore);</span>
+<span class="fc bfc" id="L129" title="All 2 branches covered.">    if (homeTeamScore &gt; awayTeamScore) {</span>
+<span class="fc" id="L130">      this.thisGame.getHomeTeam().getRecord().addWinNum();</span>
+<span class="fc" id="L131">      this.thisGame.getAwayTeam().getRecord().addLossNum();</span>
+<span class="fc bfc" id="L132" title="All 2 branches covered.">    } else if (homeTeamScore == awayTeamScore) {</span>
+<span class="fc" id="L133">      this.thisGame.getHomeTeam().getRecord().addTieNum();</span>
+<span class="fc" id="L134">      this.thisGame.getAwayTeam().getRecord().addTieNum();</span>
+    } else {
+<span class="fc" id="L136">      this.thisGame.getAwayTeam().getRecord().addWinNum();</span>
+<span class="fc" id="L137">      this.thisGame.getHomeTeam().getRecord().addLossNum();</span>
+    }
+<span class="fc" id="L139">  }</span>
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

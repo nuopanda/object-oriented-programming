@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Team.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CS5004 Assignment</a> &gt; <a href="index.source.html" class="el_package">edu.neu.ccs.cs5004.assignment4.problem2</a> &gt; <span class="el_source">Team.java</span></div><h1>Team.java</h1><pre class="source lang-java linenums">package edu.neu.ccs.cs5004.assignment4.problem2;
+
+/**
+ * Represents a class Team with their details -name, league, seasonOn, gamePlayed,
+ * gameRemaining,record, points, lastGame and WINPOINT.
+ *
+ * @author nikkiwang
+ */
+public class Team {
+
+  protected String name;
+  protected League league;
+<span class="fc" id="L13">  protected boolean seasonOn = false;</span>
+<span class="fc" id="L14">  protected int gamePlayed = 0;</span>
+<span class="fc" id="L15">  protected int gameRemaining = 0;</span>
+<span class="fc" id="L16">  protected Record record = new Record();</span>
+<span class="fc" id="L17">  protected int points = 0;</span>
+<span class="fc" id="L18">  protected Game lastGame = null;</span>
+  protected static final int WIN_POINT = 1;
+
+  /**
+   * Create the constructor of Team.
+   *
+   * @param name --team's name
+   * @param league -- team's league
+   */
+<span class="fc" id="L27">  public Team(String name, League league) {</span>
+<span class="fc" id="L28">    this.name = name;</span>
+<span class="fc" id="L29">    this.league = league;</span>
+<span class="fc" id="L30">  }</span>
+
+  /**
+   * Get name.
+   *
+   * @return name
+   */
+  public String getName() {
+<span class="fc" id="L38">    return this.name;</span>
+  }
+
+  /**
+   * Get league.
+   *
+   * @return league.
+   */
+  public League getLeague() {
+<span class="fc" id="L47">    return this.league;</span>
+  }
+
+  /**
+   * Get whether season On.
+   *
+   * @return seasonOn.
+   */
+  public boolean isSeasonOn() {
+<span class="fc" id="L56">    return this.seasonOn;</span>
+  }
+
+  /**
+   * Set season On.
+   *
+   * @param seasonOn -- whether is on season
+   */
+  public void setSeasonOn(boolean seasonOn) {
+<span class="fc" id="L65">    this.seasonOn = seasonOn;</span>
+<span class="fc" id="L66">  }</span>
+
+  /**
+   * Add played game number.
+   */
+  public void addGamePlayed() {
+<span class="fc" id="L72">    this.gamePlayed += 1;</span>
+<span class="fc" id="L73">  }</span>
+
+  /**
+   * Get played game number.
+   *
+   * @return played game number.
+   */
+  public int getGamePlayed() {
+<span class="fc" id="L81">    return this.gamePlayed;</span>
+  }
+
+  /**
+   * Set remaining game number.
+   *
+   * @param gameRemaining -- number of remaining game
+   */
+  public void setGameRemaining(int gameRemaining) throws IllegalArgumentException {
+<span class="fc" id="L90">    this.gameRemaining = gameRemaining;</span>
+<span class="fc bfc" id="L91" title="All 2 branches covered.">    if (this.gameRemaining &lt; 0) {</span>
+<span class="fc" id="L92">      throw new IllegalArgumentException(&quot;invalid remaining number.&quot;);</span>
+    }
+<span class="fc" id="L94">  }</span>
+
+  /**
+   * Reduce remaining game number.
+   */
+  public void reduceGameRemaining() throws IllegalArgumentException {
+<span class="fc" id="L100">    this.gameRemaining -= 1;</span>
+<span class="fc bfc" id="L101" title="All 2 branches covered.">    if (this.gameRemaining &lt; 0) {</span>
+<span class="fc" id="L102">      throw new IllegalArgumentException(&quot;invalid remaining number.&quot;);</span>
+    }
+<span class="fc" id="L104">  }</span>
+
+  /**
+   * Get remaining game number.
+   *
+   * @return remaining game.
+   */
+  public int getGameRemaining() {
+<span class="fc" id="L112">    return this.gameRemaining;</span>
+  }
+
+  /**
+   * Get the record.
+   *
+   * @return record
+   */
+  public Record getRecord() {
+<span class="fc" id="L121">    return this.record;</span>
+  }
+
+  /**
+   * Set the last game.
+   *
+   * @param game -- last game
+   */
+  public void setLastGame(Game game) {
+<span class="fc" id="L130">    this.lastGame = game;</span>
+<span class="fc" id="L131">  }</span>
+
+  /**
+   * Get the last game.
+   *
+   * @return lastgame
+   * @throws Exception if lastGame is null
+   */
+  public Game getLastGame() throws Exception {
+<span class="fc bfc" id="L140" title="All 2 branches covered.">    if (this.lastGame == null) {</span>
+<span class="fc" id="L141">      throw new InvalidGameException(&quot;No last game played.&quot;);</span>
+    }
+<span class="fc" id="L143">    return this.lastGame;</span>
+  }
+
+  /**
+   * Get the points.
+   *
+   * @return points
+   */
+  public int getPoints() {
+<span class="fc" id="L152">    int winNum = this.record.getWinNum();</span>
+<span class="fc" id="L153">    this.points = winNum * WIN_POINT;</span>
+<span class="fc" id="L154">    return this.points;</span>
+  }
+
+  /**
+   * Play game, update information. update lastGame, gamePlayed, gameRemaining, record
+   *
+   * @param game -- played game
+   * @param homeTeam -- whether the team is homeTeam
+   */
+  public void playGame(Game game, boolean homeTeam) {
+<span class="fc" id="L164">    this.lastGame = game;</span>
+<span class="fc" id="L165">    this.gamePlayed += 1;</span>
+<span class="fc" id="L166">    this.gameRemaining -= 1;</span>
+<span class="fc" id="L167">    int homeTeamScore = game.getHomeTeamScore();</span>
+<span class="fc" id="L168">    int awayTeamScore = game.getAwayTeamScore();</span>
+<span class="fc bfc" id="L169" title="All 2 branches covered.">    if (homeTeamScore == awayTeamScore) {</span>
+<span class="fc" id="L170">      this.getRecord().addTieNum();</span>
+    }
+<span class="fc bfc" id="L172" title="All 2 branches covered.">    if (homeTeam) {</span>
+<span class="pc bpc" id="L173" title="1 of 2 branches missed.">      if (homeTeamScore &gt; awayTeamScore) {</span>
+<span class="nc" id="L174">        this.getRecord().addWinNum();</span>
+<span class="fc bfc" id="L175" title="All 2 branches covered.">      } else if (homeTeamScore &lt; awayTeamScore) {</span>
+<span class="fc" id="L176">        this.getRecord().addLossNum();</span>
+      }
+    } else {
+<span class="pc bpc" id="L179" title="1 of 2 branches missed.">      if (homeTeamScore &lt; awayTeamScore) {</span>
+<span class="nc" id="L180">        this.getRecord().addWinNum();</span>
+<span class="pc bpc" id="L181" title="1 of 2 branches missed.">      } else if (homeTeamScore &gt; awayTeamScore) {</span>
+<span class="fc" id="L182">        this.getRecord().addLossNum();</span>
+      }
+    }
+<span class="fc" id="L185">    this.getPoints();</span>
+<span class="fc" id="L186">  }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

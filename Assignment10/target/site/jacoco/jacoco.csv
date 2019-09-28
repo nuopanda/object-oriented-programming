@@ -1,0 +1,11 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+CS5004 Assignment,edu.neu.ccs.cs5004,Client,2,70,1,9,0,15,1,10,0,6
+CS5004 Assignment,edu.neu.ccs.cs5004,SecureBankVerificationSimulator,67,475,11,31,10,94,9,21,0,9
+CS5004 Assignment,edu.neu.ccs.cs5004,InvalidArgumentsException,0,4,0,0,0,2,0,1,0,1
+CS5004 Assignment,edu.neu.ccs.cs5004,Bank,2,297,4,28,0,56,4,24,0,12
+CS5004 Assignment,edu.neu.ccs.cs5004,ClientInfoList,2,77,2,8,0,15,2,9,0,6
+CS5004 Assignment,edu.neu.ccs.cs5004,Key,2,77,1,9,0,15,1,10,0,6
+CS5004 Assignment,edu.neu.ccs.cs5004,ParseResult,0,125,2,12,0,21,2,13,0,8
+CS5004 Assignment,edu.neu.ccs.cs5004,MainForSimulator,1,53,1,7,0,15,1,8,0,5
+CS5004 Assignment,edu.neu.ccs.cs5004,RsaPair,2,202,3,15,0,39,3,15,0,9
+CS5004 Assignment,edu.neu.ccs.cs5004,MessageSignPair,9,125,3,11,1,26,3,13,0,9

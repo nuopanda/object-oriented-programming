@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3287646d-4b6e-47f3-b8c0-3c8443a5bdcb" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1252791527">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="JAVA" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="2524" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-1898608442">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.0" value="3" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.opened" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="17" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="245" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Assignment1/problem1/Owner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Assignment1/problem1/OwnerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit4 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Vehicle.java" />
+        <option value="$PROJECT_DIR$/src/VehicleTest.java" />
+        <option value="$PROJECT_DIR$/src/Assignment1/Owner.java" />
+        <option value="$PROJECT_DIR$/src/Assignment1/Vehicle.java" />
+        <option value="$PROJECT_DIR$/src/Assignment1/OwnerTest.java" />
+        <option value="$PROJECT_DIR$/src/Assignment1/VehicleTest.java" />
+        <option value="$PROJECT_DIR$/src/Assignment1/ScratchAccount.java" />
+        <option value="$PROJECT_DIR$/src/Assignment1/ScratchBicyclist.java" />
+        <option value="$PROJECT_DIR$/src/problem3/Account.java" />
+        <option value="$PROJECT_DIR$/src/problem2/Bicyclist.java" />
+        <option value="$PROJECT_DIR$/src/problem2/Time.java" />
+        <option value="$PROJECT_DIR$/src/problem1/Vehicle.java" />
+        <option value="$PROJECT_DIR$/src/problem1/Owner.java" />
+        <option value="$PROJECT_DIR$/src/problem1/OwnerTest.java" />
+        <option value="$PROJECT_DIR$/src/problem1/VehicleTest.java" />
+        <option value="$PROJECT_DIR$/src/problem2/BicyclistTest.java" />
+        <option value="$PROJECT_DIR$/src/problem2/TimeTest.java" />
+        <option value="$PROJECT_DIR$/src/problem3/AccountTest.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1445" />
+    <option name="height" value="829" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="hw1-nikkiwang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hw1-nikkiwang" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hw1-nikkiwang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hw1-nikkiwang" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hw1-nikkiwang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hw1-nikkiwang" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Assignment1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hw1-nikkiwang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hw1-nikkiwang" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Assignment1" type="462c0819:PsiDirectoryNode" />
+              <item name="problem1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hw1-nikkiwang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hw1-nikkiwang" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Assignment1" type="462c0819:PsiDirectoryNode" />
+              <item name="problem2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hw1-nikkiwang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hw1-nikkiwang" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Assignment1" type="462c0819:PsiDirectoryNode" />
+              <item name="problem3" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547611245633" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Assignment1" />
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.AccountTest">
+    <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="problem1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="problem3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="problem3" />
+      <option name="MAIN_CLASS_NAME" value="problem3.AccountTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BicyclistTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="problem1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="problem3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="problem2" />
+      <option name="MAIN_CLASS_NAME" value="problem2.BicyclistTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OwnerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="problem1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="problem3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="problem1" />
+      <option name="MAIN_CLASS_NAME" value="problem1.OwnerTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TimeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="problem1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="problem2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="problem2" />
+      <option name="MAIN_CLASS_NAME" value="problem2.TimeTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VehicleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="problem1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="problem1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="problem1" />
+      <option name="MAIN_CLASS_NAME" value="problem1.VehicleTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.BicyclistTest" />
+      <item itemvalue="JUnit.AccountTest" />
+      <item itemvalue="JUnit.OwnerTest" />
+      <item itemvalue="JUnit.VehicleTest" />
+      <item itemvalue="JUnit.TimeTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AccountTest" />
+        <item itemvalue="JUnit.BicyclistTest" />
+        <item itemvalue="JUnit.OwnerTest" />
+        <item itemvalue="JUnit.VehicleTest" />
+        <item itemvalue="JUnit.TimeTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3287646d-4b6e-47f3-b8c0-3c8443a5bdcb" name="Default Changelist" comment="" />
+      <created>1547102478553</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1547102478553</updated>
+      <workItem from="1547102483381" duration="3054000" />
+      <workItem from="1547432731985" duration="551000" />
+      <workItem from="1547436739360" duration="1800000" />
+      <workItem from="1547590222575" duration="639000" />
+      <workItem from="1547594548633" duration="1468000" />
+      <workItem from="1547596759567" duration="131000" />
+      <workItem from="1547611228459" duration="20000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="AccountTest - 2019.01.15 at 15h 27m 17s.xml">
+      <configuration name="AccountTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OwnerTest - 2019.01.15 at 15h 32m 26s.xml">
+      <configuration name="OwnerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountTest - 2019.01.15 at 15h 36m 43s.xml">
+      <configuration name="AccountTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BicyclistTest - 2019.01.15 at 15h 36m 46s.xml">
+      <configuration name="BicyclistTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TimeTest - 2019.01.15 at 15h 36m 49s.xml">
+      <configuration name="TimeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OwnerTest - 2019.01.15 at 15h 36m 52s.xml">
+      <configuration name="OwnerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VehicleTest - 2019.01.15 at 15h 36m 55s.xml">
+      <configuration name="VehicleTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OwnerTest - 2019.01.15 at 20h 00m 37s.xml">
+      <configuration name="OwnerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BicyclistTest - 2019.01.15 at 20h 00m 41s.xml">
+      <configuration name="BicyclistTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountTest - 2019.01.15 at 20h 00m 46s.xml">
+      <configuration name="AccountTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="7663000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="2560" height="1367" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2366958" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32925764" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33803922" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32789117" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Assignment1/ScratchAccount.java" />
+    <entry file="file://$PROJECT_DIR$/src/Assignment1/ScratchBicyclist.java" />
+    <entry file="file://$PROJECT_DIR$/problem1.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem3/Account.java" />
+    <entry file="file://$PROJECT_DIR$/src/problem3/AccountHolder.java" />
+    <entry file="file://$PROJECT_DIR$/src/problem3/Amount.java" />
+    <entry file="file://$PROJECT_DIR$/src/problem1/Vehicle.java" />
+    <entry file="file://$PROJECT_DIR$/src/problem2/Bicyclist.java" />
+    <entry file="file://$PROJECT_DIR$/src/problem2/Time.java" />
+    <entry file="file://$PROJECT_DIR$/src/problem1/VehicleTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/problem1/OwnerTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/problem2/BicyclistTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/problem2/TimeTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/problem3/AccountTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/problem1/Owner.java" />
+    <entry file="file://$PROJECT_DIR$/src/Assignment1/problem1/Owner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Assignment1/problem1/OwnerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

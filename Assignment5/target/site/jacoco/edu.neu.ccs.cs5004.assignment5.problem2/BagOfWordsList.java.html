@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>BagOfWordsList.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CS5004 Assignment</a> &gt; <a href="index.source.html" class="el_package">edu.neu.ccs.cs5004.assignment5.problem2</a> &gt; <span class="el_source">BagOfWordsList.java</span></div><h1>BagOfWordsList.java</h1><pre class="source lang-java linenums">package edu.neu.ccs.cs5004.assignment5.problem2;
+
+/**
+ * Represents a BagOfWordsList.
+ */
+public interface BagOfWordsList {
+
+  /**
+   * Creates a new empty Cons.
+   *
+   * @return new empty Cons
+   */
+  static Empty emptyBagOfWords() {
+<span class="fc" id="L14">    return new Empty();</span>
+  }
+
+  /**
+   * Check if the Cons is empty.
+   *
+   * @return if the Cons is empty.
+   */
+  Boolean isEmpty();
+
+  /**
+   * Get the size of the Cons.
+   *
+   * @return the size
+   */
+  Integer size();
+
+  /**
+   * Getter for property 'first'.
+   *
+   * @return String for property 'first'.
+   */
+  String getFirst();
+
+  /**
+   * Returns a linked list containing information about the rest of the Cons.
+   *
+   * @return - a linked list containing information  about the rest of the Cons
+   */
+  BagOfWordsList getRestOfBag();
+
+  /**
+   * Add new string to Cons.
+   *
+   * @param word -- new string
+   * @return -- new BafOfWords
+   */
+  BagOfWordsList add(String word);
+
+  /**
+   * Check if a string is in the Cons.
+   *
+   * @param word -- string
+   * @return Boolean - if the string is in the Cons
+   */
+  Boolean contains(String word);
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

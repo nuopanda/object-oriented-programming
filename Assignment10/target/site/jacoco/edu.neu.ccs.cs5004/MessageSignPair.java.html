@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>MessageSignPair.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CS5004 Assignment</a> &gt; <a href="index.source.html" class="el_package">edu.neu.ccs.cs5004</a> &gt; <span class="el_source">MessageSignPair.java</span></div><h1>MessageSignPair.java</h1><pre class="source lang-java linenums">package edu.neu.ccs.cs5004;
+
+import java.math.BigInteger;
+import java.util.Objects;
+import java.util.Random;
+
+/**
+ * The class Message sign pair.
+ */
+public class MessageSignPair {
+
+<span class="fc" id="L12">  private static final Integer HUNDRED = 100;</span>
+<span class="fc" id="L13">  private static final Integer MESSAGE_LIMIT_BOUND = 30001;</span>
+  private Integer message;
+  private BigInteger signature;
+
+  /**
+   * Instantiates a new Message sign pair.
+   *
+   * @param client the client
+   * @param invalidPercent the invalid percent
+   */
+<span class="fc" id="L23">  public MessageSignPair(Client client, double invalidPercent) {</span>
+<span class="fc" id="L24">    generatePair(client, invalidPercent);</span>
+
+<span class="fc" id="L26">  }</span>
+
+  /**
+   * Instantiates a new Message sign pair.
+   *
+   * @param message the message
+   * @param signature the signature
+   */
+<span class="fc" id="L34">  public MessageSignPair(Integer message, BigInteger signature) {</span>
+<span class="fc" id="L35">    this.message = message;</span>
+<span class="fc" id="L36">    this.signature = signature;</span>
+<span class="fc" id="L37">  }</span>
+
+  /**
+   * Generate pair.
+   *
+   * @param client the client
+   * @param invalidPercent the invalid percent
+   */
+  public void generatePair(Client client, double invalidPercent) {
+<span class="fc" id="L46">    Random random = new Random();</span>
+<span class="fc" id="L47">    this.message = random.nextInt(MESSAGE_LIMIT_BOUND);</span>
+<span class="pc bpc" id="L48" title="1 of 2 branches missed.">    boolean valid = HUNDRED * random.nextDouble() &gt; invalidPercent;</span>
+<span class="pc bpc" id="L49" title="1 of 2 branches missed.">    if (valid) {</span>
+<span class="fc" id="L50">      this.signature = client.getPair().getSignature(message);</span>
+    } else {
+<span class="nc" id="L52">      this.signature = BigInteger.valueOf(random.nextInt());</span>
+    }
+<span class="fc" id="L54">  }</span>
+
+  /**
+   * Gets message.
+   *
+   * @return the message
+   */
+  public Integer getMessage() {
+<span class="fc" id="L62">    return message;</span>
+  }
+
+  /**
+   * Gets signature.
+   *
+   * @return the signature
+   */
+  public BigInteger getSignature() {
+<span class="fc" id="L71">    return signature;</span>
+  }
+
+  @Override
+  public String toString() {
+<span class="fc" id="L76">    return &quot;MessageSignPair{&quot;</span>
+        + &quot;message=&quot; + message
+        + &quot;, signature=&quot; + signature
+        + '}';
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+<span class="fc bfc" id="L84" title="All 2 branches covered.">    if (this == obj) {</span>
+<span class="fc" id="L85">      return true;</span>
+    }
+<span class="fc bfc" id="L87" title="All 4 branches covered.">    if (obj == null || getClass() != obj.getClass()) {</span>
+<span class="fc" id="L88">      return false;</span>
+    }
+<span class="fc" id="L90">    MessageSignPair that = (MessageSignPair) obj;</span>
+<span class="fc bfc" id="L91" title="All 2 branches covered.">    return Objects.equals(message, that.message)</span>
+<span class="pc bpc" id="L92" title="1 of 2 branches missed.">        &amp;&amp; Objects.equals(signature, that.signature);</span>
+  }
+
+  @Override
+  public int hashCode() {
+<span class="fc" id="L97">    return Objects.hash(message, signature);</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>
